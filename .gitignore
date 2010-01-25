@@ -2,5 +2,6 @@
 config/database.yml
 coverage/*
 log/*
-public/cache/*
+public/javascripts/cache/*
+public/sytlesheets/cache/*
 tmp/*
