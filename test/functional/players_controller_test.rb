@@ -2,6 +2,10 @@ require 'test_helper'
 
 class PlayersControllerTest < ActionController::TestCase
   
+  def setup
+    @team = Factory(:team)
+  end
+  
   test "should get index" do
     get :index
     assert_response :success
@@ -15,7 +19,7 @@ class PlayersControllerTest < ActionController::TestCase
 
   test "should create player" do
     assert_difference('Player.count') do
-      post :create, :player => { }
+      post :create, :player => Factory.attributes_for(:player, :team => @team)
     end
 
     assert_redirected_to player_path(assigns(:player))

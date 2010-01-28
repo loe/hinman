@@ -14,7 +14,7 @@ class TeamsControllerTest < ActionController::TestCase
 
   test "should create team" do
     assert_difference('Team.count') do
-      post :create, :team => { }
+      post :create, :team => Factory.attributes_for(:team)
     end
 
     assert_redirected_to team_path(assigns(:team))
