@@ -12,6 +12,10 @@
     <%= f.text_area :bio %>
   </p>
   <p>
+    <%= f.label :team_id %><br />
+    <%= f.select :team_id, Team.all.collect { |t| [t.name, t.id]} %>
+  </p>
+  <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>

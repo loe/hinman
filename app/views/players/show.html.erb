@@ -8,6 +8,11 @@
   <%=h @player.bio %>
 </p>
 
+<p>
+  <b>Team:</b>
+  <%= link_to(@player.team.name, team_path(@player.team)) %>
+</p>
+
 
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>

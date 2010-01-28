@@ -4,12 +4,14 @@
   <tr>
     <th>Name</th>
     <th>Bio</th>
+    <th>Team</th>
   </tr>
 
 <% @players.each do |player| %>
   <tr>
     <td><%=h player.name %></td>
     <td><%=h player.bio %></td>
+    <td><%= link_to(player.team.name, team_path(player.team)) %></td>
     <td><%= link_to 'Show', player %></td>
     <td><%= link_to 'Edit', edit_player_path(player) %></td>
     <td><%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %></td>

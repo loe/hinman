@@ -8,6 +8,14 @@
   <%=h @team.bio %>
 </p>
 
+<p>
+  <b>Players:</b>
+  <ul>
+    <% @team.players.each do |p| %>
+    <li><%= link_to(p.name, player_path(p)) %></li>
+    <% end %>
+  </ul>
+</p>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
