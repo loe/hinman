@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class PlayersControllerTest < ActionController::TestCase
+  
   test "should get index" do
     get :index
     assert_response :success
@@ -21,23 +22,24 @@ class PlayersControllerTest < ActionController::TestCase
   end
 
   test "should show player" do
-    get :show, :id => players(:one).to_param
+    get :show, :id => Factory(:player).to_param
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => players(:one).to_param
+    get :edit, :id => Factory(:player).to_param
     assert_response :success
   end
 
   test "should update player" do
-    put :update, :id => players(:one).to_param, :player => { }
+    put :update, :id => Factory(:player).to_param, :player => { }
     assert_redirected_to player_path(assigns(:player))
   end
 
   test "should destroy player" do
+    player = Factory(:player)
     assert_difference('Player.count', -1) do
-      delete :destroy, :id => players(:one).to_param
+      delete :destroy, :id => player.to_param
     end
 
     assert_redirected_to players_path
