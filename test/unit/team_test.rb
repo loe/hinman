@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class TeamTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+
+  test "should require a name" do
+    team = Factory.build(:team, :name => nil)
+    assert !team.valid?
   end
 end
