@@ -9,7 +9,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100128072805) do
+ActiveRecord::Schema.define(:version => 20100219034326) do
+
+  create_table "boats", :force => true do |t|
+    t.integer  "bow"
+    t.integer  "fleet_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "entries", :force => true do |t|
+    t.integer  "team_id"
+    t.integer  "race_id"
+    t.integer  "fleet_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fleets", :force => true do |t|
+    t.string   "color"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "players", :force => true do |t|
     t.string   "name"
@@ -20,6 +41,12 @@ ActiveRecord::Schema.define(:version => 20100128072805) do
   end
 
   add_index "players", ["team_id"], :name => "index_players_on_team_id"
+
+  create_table "races", :force => true do |t|
+    t.string   "aasm_state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "teams", :force => true do |t|
     t.string   "name"
