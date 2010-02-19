@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class RaceTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  
+  test "should create a race" do
+    assert Factory.create(:race)
   end
+  
 end

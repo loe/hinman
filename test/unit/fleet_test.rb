@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class FleetTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  
+  test "should require a color" do
+    fleet = Factory.build(:fleet, :color => nil)
+    assert !fleet.valid?
   end
+  
 end

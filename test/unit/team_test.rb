@@ -6,4 +6,5 @@ class TeamTest < ActiveSupport::TestCase
     team = Factory.build(:team, :name => nil)
     assert !team.valid?
   end
+  
 end

@@ -1,7 +1,9 @@
 class Entry < ActiveRecord::Base
   
-  has_one :fleet
-  has_one :team
-  has_one :race
+  belongs_to :fleet
+  belongs_to :team
+  belongs_to :race
+  
+  validates_presence_of :fleet, :team, :race
   
 end

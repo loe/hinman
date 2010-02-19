@@ -1,8 +1,15 @@
 require 'test_helper'
 
 class BoatTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+
+  test "should require a bow #" do
+    boat = Factory.build(:boat, :bow => nil)
+    assert !boat.valid?
   end
+  
+  test "should require a fleet" do
+    boat = Factory.build(:boat, :fleet => nil)
+    assert !boat.valid?
+  end
+
 end
