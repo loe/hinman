@@ -91,4 +91,5 @@ class BoatsController < ApplicationController
   def load_fleet
     @fleet = Fleet.find(params[:fleet_id])
   end
+  
 end

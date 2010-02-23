@@ -1,8 +1,11 @@
 class PlayersController < ApplicationController
+  
+  before_filter :load_team
+  
   # GET /players
   # GET /players.xml
   def index
-    @players = Player.all
+    @players = @team.players
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +16,7 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.xml
   def show
-    @player = Player.find(params[:id])
+    @player = @team.players.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +27,7 @@ class PlayersController < ApplicationController
   # GET /players/new
   # GET /players/new.xml
   def new
-    @player = Player.new
+    @player = @team.players.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,18 +37,18 @@ class PlayersController < ApplicationController
 
   # GET /players/1/edit
   def edit
-    @player = Player.find(params[:id])
+    @player = @team.players.find(params[:id])
   end
 
   # POST /players
   # POST /players.xml
   def create
-    @player = Player.new(params[:player])
+    @player = @team.players.build(params[:player])
 
     respond_to do |format|
       if @player.save
         flash[:notice] = 'Player was successfully created.'
-        format.html { redirect_to(@player) }
+        format.html { redirect_to(team_player_path(@team, @player)) }
         format.xml  { render :xml => @player, :status => :created, :location => @player }
       else
         format.html { render :action => "new" }
@@ -57,12 +60,12 @@ class PlayersController < ApplicationController
   # PUT /players/1
   # PUT /players/1.xml
   def update
-    @player = Player.find(params[:id])
+    @player = @team.players.find(params[:id])
 
     respond_to do |format|
       if @player.update_attributes(params[:player])
         flash[:notice] = 'Player was successfully updated.'
-        format.html { redirect_to(@player) }
+        format.html { redirect_to(team_player_path(@team, @player)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -74,12 +77,19 @@ class PlayersController < ApplicationController
   # DELETE /players/1
   # DELETE /players/1.xml
   def destroy
-    @player = Player.find(params[:id])
+    @player = @team.players.find(params[:id])
     @player.destroy
 
     respond_to do |format|
-      format.html { redirect_to(players_url) }
+      format.html { redirect_to(team_players_path) }
       format.xml  { head :ok }
     end
   end
+  
+  protected
+  
+  def load_team
+    @team = Team.find(params[:team_id])
+  end
+  
 end

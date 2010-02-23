@@ -12,7 +12,7 @@
   <b>Players:</b>
   <ul>
     <% @team.players.each do |p| %>
-    <li><%= link_to(p.name, player_path(p)) %></li>
+    <li><%= link_to(p.name, team_player_path(@team, p)) %></li>
     <% end %>
   </ul>
 </p>
