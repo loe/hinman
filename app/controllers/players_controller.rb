@@ -81,7 +81,7 @@ class PlayersController < ApplicationController
     @player.destroy
 
     respond_to do |format|
-      format.html { redirect_to(team_players_path) }
+      format.html { redirect_to(team_players_path(@team)) }
       format.xml  { head :ok }
     end
   end

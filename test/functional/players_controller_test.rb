@@ -3,49 +3,49 @@ require 'test_helper'
 class PlayersControllerTest < ActionController::TestCase
   
   def setup
-    @team = Factory(:team)
+    @player = Factory(:player)
   end
   
   test "should get index" do
-    get :index
+    get :index, :team_id => @player.team.to_param
     assert_response :success
+    assert_not_nil assigns(:team)
     assert_not_nil assigns(:players)
   end
 
   test "should get new" do
-    get :new
+    get :new, :team_id => @player.team.to_param
     assert_response :success
   end
 
   test "should create player" do
     assert_difference('Player.count') do
-      post :create, :player => Factory.attributes_for(:player, :team => @team)
+      post :create, :team_id => @player.team.to_param, :player => Factory.attributes_for(:player)
     end
 
-    assert_redirected_to player_path(assigns(:player))
+    assert_redirected_to team_player_path(assigns(:team), assigns(:player))
   end
 
   test "should show player" do
-    get :show, :id => Factory(:player).to_param
+    get :show, :team_id => @player.team.to_param, :id => @player.to_param
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => Factory(:player).to_param
+    get :edit, :team_id => @player.team.to_param, :id => @player.to_param
     assert_response :success
   end
 
   test "should update player" do
-    put :update, :id => Factory(:player).to_param, :player => { }
-    assert_redirected_to player_path(assigns(:player))
+    put :update, :team_id => @player.team.to_param, :id => @player.to_param, :player => { }
+    assert_redirected_to team_player_path(assigns(:team), assigns(:player))
   end
 
   test "should destroy player" do
-    player = Factory(:player)
     assert_difference('Player.count', -1) do
-      delete :destroy, :id => player.to_param
+      delete :destroy, :team_id => @player.team.to_param, :id => @player.to_param
     end
 
-    assert_redirected_to players_path
+    assert_redirected_to team_players_path(assigns(:team))
   end
 end
