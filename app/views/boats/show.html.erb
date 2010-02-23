@@ -1,0 +1,13 @@
+<p>
+  <b>Bow:</b>
+  <%=h @boat.bow %>
+</p>
+
+<p>
+  <b>Fleet:</b>
+  <%= link_to(@fleet.color, fleet_path(@fleet)) %>
+</p>
+
+
+<%= link_to 'Edit', edit_fleet_boat_path(@fleet, @boat) %> |
+<%= link_to 'Back', fleet_boats_path(@fleet) %>

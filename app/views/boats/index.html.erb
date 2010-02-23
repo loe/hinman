@@ -1,0 +1,22 @@
+<h1>Listing boats</h1>
+
+<table>
+  <tr>
+    <th>Bow</th>
+    <th>Fleet</th>
+  </tr>
+
+<% @boats.each do |boat| %>
+  <tr>
+    <td><%=h boat.bow %></td>
+    <td><%= link_to(@fleet.color, fleet_path(@fleet)) %></td>
+    <td><%= link_to 'Show', fleet_boat_path(@fleet, boat) %></td>
+    <td><%= link_to 'Edit', edit_fleet_boat_path(@fleet, boat) %></td>
+    <td><%= link_to 'Destroy', fleet_boat_path(@fleet, boat), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New boat', new_fleet_boat_path(@fleet) %>

@@ -1,0 +1,16 @@
+<h1>Editing boat</h1>
+
+<% form_for([@fleet, @boat]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :bow %><br />
+    <%= f.text_field :bow %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @boat %> |
+<%= link_to 'Back', boats_path %>
