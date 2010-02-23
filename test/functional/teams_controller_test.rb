@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class TeamsControllerTest < ActionController::TestCase
+  
+  def setup
+    @team = Factory(:team)
+  end
+  
   test "should get index" do
     get :index
     assert_response :success
@@ -21,24 +26,23 @@ class TeamsControllerTest < ActionController::TestCase
   end
 
   test "should show team" do
-    get :show, :id => Factory(:team).to_param
+    get :show, :id => @team.to_param
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => Factory(:team).to_param
+    get :edit, :id => @team.to_param
     assert_response :success
   end
 
   test "should update team" do
-    put :update, :id => Factory(:team).to_param, :team => { }
+    put :update, :id => @team.to_param, :team => { }
     assert_redirected_to team_path(assigns(:team))
   end
 
   test "should destroy team" do
-    team = Factory(:team)
     assert_difference('Team.count', -1) do
-      delete :destroy, :id => team.to_param
+      delete :destroy, :id => @team.to_param
     end
 
     assert_redirected_to teams_path
