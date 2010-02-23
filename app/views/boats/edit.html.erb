@@ -12,5 +12,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @boat %> |
-<%= link_to 'Back', boats_path %>
+<%= link_to 'Show', fleet_boat_path(@fleet, @boat) %> |
+<%= link_to 'Back', fleet_boats_path(@fleet) %>
