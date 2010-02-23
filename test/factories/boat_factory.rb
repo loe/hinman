@@ -1,4 +1,4 @@
 Factory.define :boat do |b|
-  b.bow '42'
   b.association :fleet
+  b.bow '42'
 end
