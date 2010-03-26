@@ -1,0 +1,45 @@
+--- 
+dependencies: 
+  pg: 
+    group: 
+    - :default
+    version: = 0.9.0
+  rails: 
+    group: 
+    - :default
+    version: = 2.3.5
+  mocha: 
+    group: 
+    - :test
+    version: ">= 0"
+  factory_girl: 
+    group: 
+    - :test
+    version: ">= 0"
+specs: 
+- rake: 
+    version: 0.8.7
+- activesupport: 
+    version: 2.3.5
+- rack: 
+    version: 1.0.1
+- actionpack: 
+    version: 2.3.5
+- actionmailer: 
+    version: 2.3.5
+- activerecord: 
+    version: 2.3.5
+- activeresource: 
+    version: 2.3.5
+- factory_girl: 
+    version: 1.2.3
+- mocha: 
+    version: 0.9.8
+- pg: 
+    version: 0.9.0
+- rails: 
+    version: 2.3.5
+hash: 40c1c63c18a90b6ca6e6c5167ca8b4b04c7b9854
+sources: 
+- Rubygems: 
+    uri: http://gemcutter.org
