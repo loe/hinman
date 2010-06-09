@@ -6,7 +6,7 @@
     <th>Fleet</th>
   </tr>
 
-<%= @boats.each do |boat| %>
+<% @boats.each do |boat| %>
   <tr>
     <td><%= boat.bow %></td>
     <td><%= link_to(@fleet.color, fleet_path(@fleet)) %></td>

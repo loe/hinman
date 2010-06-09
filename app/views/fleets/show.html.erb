@@ -5,7 +5,7 @@
 <p>
   <b>Boats:</b>
   <ul>
-    <%= @fleet.boats.each do |b| %>
+    <% @fleet.boats.each do |b| %>
     <li><%= link_to(b.bow, fleet_boat_path(@fleet, b)) %></li>
     <% end %>
   </ul>
