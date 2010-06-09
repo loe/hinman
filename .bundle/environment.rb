@@ -174,21 +174,37 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.26'
-  FINGERPRINT  = "63d361b2410e0bb546a04b34a76966b81c5f8d27"
+  FINGERPRINT  = "45c64e4692023f989a4c214744f22b58163d05ef"
   HOME         = '/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/bundler'
   AUTOREQUIRES = {:test=>[["factory_girl", false], ["mocha", false]], :default=>[["pg", false], ["rails", false]]}
   SPECS        = [
         {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/rake-0.8.7.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/rake-0.8.7/lib"], :name=>"rake"},
-        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/activesupport-2.3.8.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/activesupport-2.3.8/lib"], :name=>"activesupport"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/abstract-1.0.0.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/abstract-1.0.0/lib"], :name=>"abstract"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/activesupport-3.0.0.beta4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/activesupport-3.0.0.beta4/lib"], :name=>"activesupport"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/builder-2.1.2.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/builder-2.1.2/lib"], :name=>"builder"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/i18n-0.4.1.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/i18n-0.4.1/lib"], :name=>"i18n"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/activemodel-3.0.0.beta4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/activemodel-3.0.0.beta4/lib"], :name=>"activemodel"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/erubis-2.6.5.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/erubis-2.6.5/lib"], :name=>"erubis"},
         {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/rack-1.1.0.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/rack-1.1.0/lib"], :name=>"rack"},
-        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/actionpack-2.3.8.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/actionpack-2.3.8/lib"], :name=>"actionpack"},
-        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/actionmailer-2.3.8.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/actionmailer-2.3.8/lib"], :name=>"actionmailer"},
-        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/activerecord-2.3.8.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/activerecord-2.3.8/lib"], :name=>"activerecord"},
-        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/activeresource-2.3.8.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/activeresource-2.3.8/lib"], :name=>"activeresource"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/rack-mount-0.6.3.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/rack-mount-0.6.3/lib"], :name=>"rack-mount"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/rack-test-0.5.4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/rack-test-0.5.4/lib"], :name=>"rack-test"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/tzinfo-0.3.22.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/tzinfo-0.3.22/lib"], :name=>"tzinfo"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/actionpack-3.0.0.beta4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/actionpack-3.0.0.beta4/lib"], :name=>"actionpack"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/mime-types-1.16.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/mime-types-1.16/lib"], :name=>"mime-types"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/polyglot-0.3.1.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/polyglot-0.3.1/lib"], :name=>"polyglot"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/treetop-1.4.8.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/treetop-1.4.8/lib"], :name=>"treetop"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/mail-2.2.3.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/mail-2.2.3/lib"], :name=>"mail"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/actionmailer-3.0.0.beta4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/actionmailer-3.0.0.beta4/lib"], :name=>"actionmailer"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/arel-0.4.0.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/arel-0.4.0/lib"], :name=>"arel"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/activerecord-3.0.0.beta4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/activerecord-3.0.0.beta4/lib"], :name=>"activerecord"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/activeresource-3.0.0.beta4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/activeresource-3.0.0.beta4/lib"], :name=>"activeresource"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/bundler-0.9.26.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/bundler-0.9.26/lib"], :name=>"bundler"},
         {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/factory_girl-1.2.4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/factory_girl-1.2.4/lib"], :name=>"factory_girl"},
         {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/mocha-0.9.8.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/mocha-0.9.8/lib"], :name=>"mocha"},
         {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/pg-0.9.0.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/pg-0.9.0/lib", "/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/pg-0.9.0/ext"], :name=>"pg"},
-        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/rails-2.3.8.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/rails-2.3.8/lib"], :name=>"rails"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/thor-0.13.6.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/thor-0.13.6/lib"], :name=>"thor"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/railties-3.0.0.beta4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/railties-3.0.0.beta4/lib"], :name=>"railties"},
+        {:loaded_from=>"/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/specifications/rails-3.0.0.beta4.gemspec", :load_paths=>["/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/gems/rails-3.0.0.beta4/lib"], :name=>"rails"},
       ].map do |hash|
     if hash[:virtual_spec]
       spec = eval(hash[:virtual_spec], TOPLEVEL_BINDING, "<virtual spec for '#{hash[:name]}'>")

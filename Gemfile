@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '2.3.8'
+gem 'rails', '3.0.0.beta4'
 gem 'pg', '0.9.0'
 
 group :test do
