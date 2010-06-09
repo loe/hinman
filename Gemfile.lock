@@ -60,7 +60,8 @@ specs:
 - bundler: 
     version: 0.9.26
 - factory_girl: 
-    version: 1.2.4
+    version: 1.2.5
+    source: 0
 - mocha: 
     version: 0.9.8
 - pg: 
@@ -71,7 +72,11 @@ specs:
     version: 3.0.0.beta4
 - rails: 
     version: 3.0.0.beta4
-hash: 45c64e4692023f989a4c214744f22b58163d05ef
+hash: a0cb9a7dcad747b8e69e2fb41220d5b9db10b375
 sources: 
+- Git: 
+    uri: git://github.com/thoughtbot/factory_girl.git
+    git: git://github.com/thoughtbot/factory_girl.git
+    ref: 434f67b236382cb9e5f69f6a695e190d46098f1e
 - Rubygems: 
     uri: http://rubygems.org
