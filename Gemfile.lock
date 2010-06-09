@@ -7,7 +7,7 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: = 3.0.0.beta4
+    version: = 3.0.0.beta3
   mocha: 
     group: 
     - :test
@@ -21,14 +21,18 @@ specs:
     version: 0.8.7
 - abstract: 
     version: 1.0.0
-- activesupport: 
-    version: 3.0.0.beta4
 - builder: 
     version: 2.1.2
 - i18n: 
-    version: 0.4.1
+    version: 0.3.7
+- memcache-client: 
+    version: 1.8.3
+- tzinfo: 
+    version: 0.3.22
+- activesupport: 
+    version: 3.0.0.beta3
 - activemodel: 
-    version: 3.0.0.beta4
+    version: 3.0.0.beta3
 - erubis: 
     version: 2.6.5
 - rack: 
@@ -37,10 +41,8 @@ specs:
     version: 0.6.3
 - rack-test: 
     version: 0.5.4
-- tzinfo: 
-    version: 0.3.22
 - actionpack: 
-    version: 3.0.0.beta4
+    version: 3.0.0.beta3
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -49,16 +51,20 @@ specs:
     version: 1.4.8
 - mail: 
     version: 2.2.3
+- text-hyphen: 
+    version: 1.0.0
+- text-format: 
+    version: 1.0.0
 - actionmailer: 
-    version: 3.0.0.beta4
+    version: 3.0.0.beta3
 - arel: 
-    version: 0.4.0
+    version: 0.3.3
 - activerecord: 
-    version: 3.0.0.beta4
+    version: 3.0.0.beta3
 - activeresource: 
-    version: 3.0.0.beta4
+    version: 3.0.0.beta3
 - bundler: 
-    version: 0.9.26
+    version: 0.9.25
 - factory_girl: 
     version: 1.2.5
     source: 0
@@ -69,10 +75,10 @@ specs:
 - thor: 
     version: 0.13.6
 - railties: 
-    version: 3.0.0.beta4
+    version: 3.0.0.beta3
 - rails: 
-    version: 3.0.0.beta4
-hash: a0cb9a7dcad747b8e69e2fb41220d5b9db10b375
+    version: 3.0.0.beta3
+hash: 0a6cf7e2e0c1b2b3ec5041fca5d0577ade435447
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git
