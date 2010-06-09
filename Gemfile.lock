@@ -1,21 +1,8 @@
 --- 
-dependencies: 
-  pg: 
-    group: 
-    - :default
-    version: = 0.9.0
-  rails: 
-    group: 
-    - :default
-    version: = 3.0.0.beta3
-  mocha: 
-    group: 
-    - :test
-    version: ">= 0"
-  factory_girl: 
-    group: 
-    - :test
-    version: ">= 0"
+hash: 541de1178b781ff4eb70c8cd0f2e0ff3a673af65
+sources: 
+- Rubygems: 
+    uri: http://rubygems.org
 specs: 
 - rake: 
     version: 0.8.7
@@ -65,9 +52,6 @@ specs:
     version: 3.0.0.beta3
 - bundler: 
     version: 0.9.25
-- factory_girl: 
-    version: 1.2.5
-    source: 0
 - mocha: 
     version: 0.9.8
 - pg: 
@@ -78,11 +62,16 @@ specs:
     version: 3.0.0.beta3
 - rails: 
     version: 3.0.0.beta3
-hash: 0a6cf7e2e0c1b2b3ec5041fca5d0577ade435447
-sources: 
-- Git: 
-    uri: git://github.com/thoughtbot/factory_girl.git
-    git: git://github.com/thoughtbot/factory_girl.git
-    ref: 434f67b236382cb9e5f69f6a695e190d46098f1e
-- Rubygems: 
-    uri: http://rubygems.org
+dependencies: 
+  rails: 
+    version: = 3.0.0.beta3
+    group: 
+    - :default
+  pg: 
+    version: = 0.9.0
+    group: 
+    - :default
+  mocha: 
+    version: ">= 0"
+    group: 
+    - :test
