@@ -1,8 +1,9 @@
 .DS_Store
+.bundle
 config/database.yml
 coverage/*
 log/*
 public/javascripts/cache/*
 public/sytlesheets/cache/*
 test/fixtures
-tmp/*
+tmp/**/*
