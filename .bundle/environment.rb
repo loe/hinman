@@ -174,7 +174,7 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.26'
-  FINGERPRINT  = "21587a5d9a62fbb6ab8947afe96f955e49ab80ea"
+  FINGERPRINT  = "63d361b2410e0bb546a04b34a76966b81c5f8d27"
   HOME         = '/Users/Andrew/.rvm/gems/ree-1.8.7-2009.10/bundler'
   AUTOREQUIRES = {:test=>[["factory_girl", false], ["mocha", false]], :default=>[["pg", false], ["rails", false]]}
   SPECS        = [

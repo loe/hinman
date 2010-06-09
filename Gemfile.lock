@@ -39,7 +39,7 @@ specs:
     version: 0.9.0
 - rails: 
     version: 2.3.8
-hash: 21587a5d9a62fbb6ab8947afe96f955e49ab80ea
+hash: 63d361b2410e0bb546a04b34a76966b81c5f8d27
 sources: 
 - Rubygems: 
-    uri: http://gemcutter.org
+    uri: http://rubygems.org
