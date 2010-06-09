@@ -5,9 +5,9 @@
     <th>Color</th>
   </tr>
 
-<% @fleets.each do |fleet| %>
+<%= @fleets.each do |fleet| %>
   <tr>
-    <td><%=h fleet.color %></td>
+    <td><%= fleet.color %></td>
     <td><%= link_to 'Show', fleet %></td>
     <td><%= link_to 'Edit', edit_fleet_path(fleet) %></td>
     <td><%= link_to 'Destroy', fleet, :confirm => 'Are you sure?', :method => :delete %></td>

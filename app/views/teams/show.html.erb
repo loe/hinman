@@ -1,17 +1,17 @@
 <p>
   <b>Name:</b>
-  <%=h @team.name %>
+  <%= @team.name %>
 </p>
 
 <p>
   <b>Bio:</b>
-  <%=h @team.bio %>
+  <%= @team.bio %>
 </p>
 
 <p>
   <b>Players:</b>
   <ul>
-    <% @team.players.each do |p| %>
+    <%= @team.players.each do |p| %>
     <li><%= link_to(p.name, team_player_path(@team, p)) %></li>
     <% end %>
   </ul>

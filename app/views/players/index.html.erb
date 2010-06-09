@@ -7,10 +7,10 @@
     <th>Team</th>
   </tr>
 
-<% @players.each do |player| %>
+<%= @players.each do |player| %>
   <tr>
-    <td><%=h player.name %></td>
-    <td><%=h player.bio %></td>
+    <td><%= player.name %></td>
+    <td><%= player.bio %></td>
     <td><%= link_to(@team.name, team_path(@team)) %></td>
     <td><%= link_to 'Show', team_player_path(@team, player) %></td>
     <td><%= link_to 'Edit', edit_team_player_path(@team, player) %></td>
