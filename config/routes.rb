@@ -11,5 +11,5 @@ Hinman::Application.routes.draw do
     resources :races
   end  
   
-  match '/' => 'teams#index'
+  match '/' => 'rotations#index'
 end
