@@ -7,7 +7,7 @@ Hinman::Application.routes.draw do
     resources :boats
   end
   
-  resource :rotation
+  resources :rotations
   
   match '/' => 'teams#index'
 end
