@@ -1,15 +1,11 @@
-Factory.define :team do |p|
-  p.name 'Sideshow'
+Factory.define :team do |t|
+  t.name { Factory.next(:team_name) }
 end
 
-Factory.define :ranier do |p|
-  p.name 'Ranier Bears'
+Factory.sequence :team_name do |n|
+  "Team #{n}"
 end
 
-Factory.define :panda do |p|
-  p.name 'Silver Panda'
-end
-
-Factory.define :tall do |p|
-  p.name 'Tall Boyz'
+Factory.define :sideshow, :parent => :team do |t|
+  t.name 'Sideshow'
 end
