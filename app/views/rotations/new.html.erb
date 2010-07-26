@@ -7,6 +7,15 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
+  
+  <p>
+    <%= f.label :teams %><br />
+    <ul>
+      <% @teams.each do |team| %>
+      <li><%= link_to(team.name, teams_path(team)) %></li>
+      <% end %>
+    </ul>
+  </p>
   <p>
     <%= f.submit 'Create' %>
   </p>

@@ -1,0 +1,10 @@
+<h1>New race</h1>
+
+<%= form_for([@rotation, @race]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', rotation_races_path(@rotation) %>

@@ -1,0 +1,21 @@
+<h1>Listing races</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+  </tr>
+
+<% @races.each do |race| %>
+  <tr>
+    <td><%= race.id %></td>
+    <td><%= link_to(@rotation.name, rotation_path(@rotation)) %></td>
+    <td><%= link_to 'Show', rotation_race_path(@rotation, race) %></td>
+    <td><%= link_to 'Edit', edit_rotation_race_path(@rotation, race) %></td>
+    <td><%= link_to 'Destroy', rotation_race_path(@rotation, race), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New race', new_rotation_race_path(@rotation) %>

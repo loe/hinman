@@ -25,6 +25,7 @@ class RotationsController < ApplicationController
   # GET /rotations/new.xml
   def new
     @rotation = Rotation.new
+    @teams = Team.all
 
     respond_to do |format|
       format.html # new.html.erb
