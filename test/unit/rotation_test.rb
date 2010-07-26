@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class RotationTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+
+  test "should require a name" do
+    team = Factory.build(:rotation, :name => nil)
+    assert !team.valid?
   end
+  
 end
