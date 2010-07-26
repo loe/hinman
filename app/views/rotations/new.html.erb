@@ -12,7 +12,7 @@
     <%= f.label :teams %><br />
     <ul>
       <% @teams.each do |team| %>
-      <li><%= link_to(team.name, teams_path(team)) %></li>
+      <li> <%= check_box_tag :'rotation[teams][]', team.id, true, :id => "rotation_team_#{team.id}" %><%= link_to(team.name, team_path(team)) %></li>
       <% end %>
     </ul>
   </p>

@@ -9,7 +9,7 @@ class Rotation < ActiveRecord::Base
   before_save :build_races
   
   def build_races
-    list = teams || Team.all
+    list = teams.present? ? Team.find(teams) : Team.all
     
     while list.present? do
       # Shift off the team.

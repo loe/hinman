@@ -7,7 +7,7 @@
   <b>Races:</b>
   <ul>
     <% @rotation.races.each do |r| %>
-    <li><%= link_to(r.id, rotation_races_path(@rotation, r)) %></li>
+    <li><%= link_to(r.id, rotation_race_path(@rotation, r)) %></li>
     <% end %>
   </ul>
 </p>

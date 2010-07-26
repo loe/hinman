@@ -8,6 +8,14 @@
   <%= link_to(@rotation.name, rotation_path(@rotation)) %>
 </p>
 
+<p>
+  <b>Teams:</b>
+  <ul>
+    <% @race.teams.each do |t| %>
+    <li><%= link_to(t.name, team_path(@t)) %></li>
+    <% end %>
+  </ul>
+</p>
 
 <%= link_to 'Edit', edit_rotation_race_path(@rotation, @race) %> |
 <%= link_to 'Back', rotation_races_path(@rotation) %>
