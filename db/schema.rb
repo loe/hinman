@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100726031521) do
+ActiveRecord::Schema.define(:version => 20100726045657) do
 
   create_table "boats", :force => true do |t|
     t.integer  "bow"
@@ -69,5 +69,7 @@ ActiveRecord::Schema.define(:version => 20100726031521) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "teams", ["name"], :name => "index_teams_on_name"
 
 end
