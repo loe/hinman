@@ -4,20 +4,18 @@ class Rotation < ActiveRecord::Base
   
   validates_presence_of :name
   
-  def generate!
-    teams = Team.all
-    
+  before_save :build_races
+  
+  def build_races(teams = Team.all)
     while teams.present? do
       # Shift off the team.
       home = teams.shift
       
       # This team races everyone left.
       teams.each do |team|
-        race = Race.new
+        race = races.build
         race.entries.build(:team => home)
         race.entries.build(:team => team)
-        
-        race.save!
       end
     end
   end
