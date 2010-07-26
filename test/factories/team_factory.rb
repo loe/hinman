@@ -1,3 +1,3 @@
 Factory.define :team do |p|
-  p.name 'Rainier Bears'
+  p.name 'Sideshow'
 end
