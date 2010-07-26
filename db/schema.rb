@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100223034845) do
+ActiveRecord::Schema.define(:version => 20100726031521) do
 
   create_table "boats", :force => true do |t|
     t.integer  "bow"
@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(:version => 20100223034845) do
 
   create_table "races", :force => true do |t|
     t.string   "aasm_state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "rotation_id"
+  end
+
+  add_index "races", ["rotation_id"], :name => "index_races_on_rotation_id"
+
+  create_table "rotations", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
