@@ -2,11 +2,11 @@ class Rotation < ActiveRecord::Base
   
   attr_accessor :teams
   
-  has_many :races
+  has_many :races, :dependent => :destroy
   
   validates_presence_of :name
   
-  before_save :build_races
+  before_create :build_races
   
   def build_races
     list = teams.present? ? Team.find(teams) : Team.all
