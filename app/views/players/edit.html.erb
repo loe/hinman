@@ -1,4 +1,6 @@
-<h1>Editing player</h1>
+<% page_title "#{@player.name} (Editing)", 'Player' %>
+
+<h1>Editing Player</h1>
 
 <%= form_for([@team, @player]) do |f| %>
   <%= f.error_messages %>

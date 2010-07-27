@@ -1,4 +1,6 @@
-<h1>Editing race</h1>
+<% page_title "#{@race.id} (Editing)", 'Races' %>
+
+<h1>Editing Race</h1>
 
 <%= form_for([@rotation, @race]) do |f| %>
   <%= f.error_messages %>
