@@ -2,28 +2,45 @@
 <html>
 <head>
   <title><%= yield :title %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'reset-fonts-grids', 'base' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
   
-  <div id="banner">
-  <% if current_facebook_user %>
-    Welcome <%= current_user.name %>!
-    <%= fb_logout_link('Logout', request.path) %>
-  <% else %>
-    <%= fb_login({}) { "window.location.href = '#{request.path}'" } %>
-  <% end %>
+  <div id="doc3" class="yui-t6">
+    <div id="hd">
+      <% if current_facebook_user %>
+        Welcome <%= current_user.name %>.
+        <%= fb_logout_link('Logout', request.path) %>
+      <% else %>
+        <%= fb_login({}) { "window.location.href = '#{request.path}'" } %>
+      <% end %>
+    </div>
+    <div id="bd">
+      <div id="yui-main">
+        <ul>
+          <li><%= link_to('Rotations', rotations_path) %></li>
+          <li><%= link_to('Teams', teams_path) %></li>
+        </ul>
+        <div class="yui-b">
+          <p style="color: blue"><%= flash[:info] %></p>
+          <p style="color: red"><%= flash[:notice] %></p>
+          <p style="color: green"><%= flash[:notice] %></p>
+
+          <%= yield %>
+        </div>
+      </div>
+      <div class="yui-b">
+        <% if current_facebook_user %>
+          <fb:live-stream width="300"></fb:live-stream>
+        <% end %>
+      </div>
+    </div>
+    <div id="ft">
+      2010 US Team Racing Championship
+    </div>
   </div>
   
-  <ul>
-    <li><%= link_to('Rotations', rotations_path) %></li>
-    <li><%= link_to('Teams', teams_path) %></li>
-  </ul>
-  <p style="color: green"><%= flash[:notice] %></p>
-
-  <%= yield %>
-
   <%= render(:partial => 'shared/javascript') %>
 </body>
 </html>
