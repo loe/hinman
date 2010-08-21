@@ -1,7 +1,11 @@
 <%= yield :javascript %>
 
-<%= raw fb_connect_async_js %>
-
+<%= raw fb_connect_async_js { "
+  FB.Event.subscribe('auth.sessionChange', function(response) {
+    console.log('firing sessionChange');
+    window.location.reload();
+  });
+" } %>
 <% if Rails.env.production? %>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

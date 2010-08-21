@@ -5,14 +5,19 @@
   <%= @rotation.name %>
 </p>
 
-<p>
-  <b>Races:</b>
-  <ul>
-    <% @rotation.races.each do |r| %>
-    <li><%= link_to(r.id, rotation_race_path(@rotation, r)) %></li>
-    <% end %>
-  </ul>
-</p>
+<table>
+  <tr>
+    <th>Race</th>
+    <th>Teams</th>
+  </tr>
+
+<% @rotation.races.each do |race| %>
+  <tr>
+    <td><%= link_to(race.id, rotation_race_path(@rotation, race)) %></td>
+    <td><%= link_to(race.entries.first.team.name, team_path(race.entries.first.team)) %> vs <%= link_to(race.entries.last.team.name, team_path(race.entries.last.team)) %></td>
+  </tr>
+<% end %>
+</table>
 
 <%= link_to 'Edit', edit_rotation_path(@rotation) %> |
 <%= link_to 'Back', rotations_path %>

@@ -13,7 +13,7 @@
         Welcome <%= current_user.name %>.
         <%= fb_logout_link('Logout', request.path) %>
       <% else %>
-        <%= fb_login({}) { "window.location.href = '#{request.path}'" } %>
+        <fb:login-button></fb:login-button>
       <% end %>
     </div>
     <div id="bd">
@@ -33,6 +33,8 @@
       <div class="yui-b">
         <% if current_facebook_user %>
           <fb:live-stream width="300"></fb:live-stream>
+        <% else %>
+          <fb:login-button show-faces="true" width="300" max-rows="4"></fb:login-button>
         <% end %>
       </div>
     </div>

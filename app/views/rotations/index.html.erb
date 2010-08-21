@@ -5,15 +5,13 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Bio</th>
+    <th></th>
   </tr>
 
 <% @rotations.each do |rotation| %>
   <tr>
     <td><%= rotation.name %></td>
-    <td><%= link_to 'Show', rotation %></td>
-    <td><%= link_to 'Edit', edit_rotation_path(rotation) %></td>
-    <td><%= link_to 'Destroy', rotation, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', rotation %> <%= link_to 'Edit', edit_rotation_path(rotation) %> <%= link_to 'Destroy', rotation, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

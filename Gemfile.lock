@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/loe/facebooker2.git
-  revision: 1b4053f
+  revision: 0c41a87
   specs:
     facebooker2 (0.0.5)
       mogli (>= 0.0.12)
