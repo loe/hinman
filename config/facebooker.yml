@@ -1,0 +1,14 @@
+development:
+  app_id: <%= ENV['FB_APP_ID'] %>
+  secret: <%= ENV['FB_SECRET'] %>
+  api_key: <%= ENV['FB_API_KEY'] %>
+
+test:
+  app_id: <%= ENV['FB_APP_ID'] %>
+  secret: <%= ENV['FB_SECRET'] %>
+  api_key: <%= ENV['FB_API_KEY'] %>
+  
+production:
+  app_id: <%= ENV['FB_APP_ID'] %>
+  secret: <%= ENV['FB_SECRET'] %>
+  api_key: <%= ENV['FB_API_KEY'] %>
