@@ -6,4 +6,11 @@ class Race < ActiveRecord::Base
   has_many :teams, :through => :entries
   has_many :fleets, :through => :entries
   
+  def name
+    teams.map(&:name).join(' vs. ')
+  end
+  
+  def result
+    # TODO: Show the team combinations and declare a winner.
+  end
 end

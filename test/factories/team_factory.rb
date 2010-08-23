@@ -7,5 +7,9 @@ Factory.sequence :team_name do |n|
 end
 
 Factory.define :sideshow, :parent => :team do |t|
-  t.name 'Sideshow'
+  t.name 'Seattle Sideshow'
+end
+
+Factory.define :panda, :parent => :team do |t|
+  t.name 'NYYC Silver Panda'
 end
