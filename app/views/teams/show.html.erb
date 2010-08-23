@@ -1,8 +1,14 @@
 <% page_title @team.name, 'Teams' %>
 
+<% content_for :meta do %>
+  <meta property="og:title" content="<%= @team.name %>" />
+  <meta property="og:type" content="sports_team" />
+  <meta property="og:description" content="<%= @team.bio %>" />
+<% end %>
+
 <p>
   <b>Name:</b>
-  <%= @team.name %>
+  <%= @team.name %> <fb:like>
 </p>
 
 <p>

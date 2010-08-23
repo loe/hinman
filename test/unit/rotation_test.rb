@@ -19,4 +19,9 @@ class RotationTest < ActiveSupport::TestCase
     assert_equal Race.count, 5 + 4 + 3 + 2 + 1
   end
   
+  test "#participants should list the teams in alphabetical order" do
+    4.times { Factory.create(:team) }
+    assert_equal Factory.create(:rotation).participants, 'Team 1, Team 2, Team 3, and Team 4'
+  end
+  
 end

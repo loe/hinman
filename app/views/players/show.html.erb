@@ -1,8 +1,14 @@
 <% page_title @player.name, 'Players' %>
 
+<% content_for :meta do %>
+  <meta property="og:title" content="<%= @player.name %>" />
+  <meta property="og:type" content="athlete" />
+  <meta property="og:description" content="<%= @player.bio %>" />
+<% end %>
+
 <p>
   <b>Name:</b>
-  <%= @player.name %>
+  <%= @player.name %> <fb:like>
 </p>
 
 <p>

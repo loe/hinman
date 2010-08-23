@@ -1,4 +1,10 @@
-<% page_title @race.id, 'Races' %>
+<% page_title @race.name, 'Races' %>
+
+<% content_for :meta do %>
+  <meta property="og:title" content="<%= @race.name %>" />
+  <meta property="og:type" content="sport" />
+  <meta property="og:description" content="<%= @race.result %>" />
+<% end %>
 
 <p>
   <b>ID:</b>
