@@ -7,7 +7,7 @@ class Race < ActiveRecord::Base
   has_many :fleets, :through => :entries
   
   def name
-    teams.map(&:name).join(' vs. ')
+    "#{id} - #{teams.map(&:name).join(' vs. ')}"
   end
   
   def result

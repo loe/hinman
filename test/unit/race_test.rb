@@ -7,8 +7,7 @@ class RaceTest < ActiveSupport::TestCase
   end
   
   test "name should be Team A vs Team B" do
-    puts Factory.create(:sideshow_vs_panda).entries.inspect
-    assert_equal Factory.create(:sideshow_vs_panda).name, 'NYYC Silver Panda vs. Seattle Sideshow'
+    assert_match /NYYC Silver Panda vs. Seattle Sideshow/, Factory.create(:sideshow_vs_panda).name
   end
   
 end
