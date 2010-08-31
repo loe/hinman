@@ -56,6 +56,7 @@ GEM
       activesupport (>= 2.3.6)
       mime-types
       treetop (>= 1.4.5)
+    memcached-northscale (0.19.5.3)
     mime-types (1.16)
     mocha (0.9.8)
       rake
@@ -100,6 +101,7 @@ DEPENDENCIES
   bundler (= 1.0.0)
   facebooker2!
   factory_girl_rails
+  memcached-northscale (= 0.19.5.3)
   mocha
   pg (= 0.9.0)
   rails (= 3.0.0)
