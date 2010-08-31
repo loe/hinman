@@ -13,11 +13,12 @@ class ApplicationController < ActionController::Base
   protected
   
   def cached_facebook_user(id)
-    if Rails.cache.exist?(id)
-      Rails.cache.read(id)
+    if value = Rails.cache.read(id)
+      value
     else
       value = Mogli::User.find(id, current_facebook_client)
       Rails.cache.write(id, value, :expires_in => 30.minutes)
+      value
     end
   end
   
