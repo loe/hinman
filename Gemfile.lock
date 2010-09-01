@@ -101,8 +101,8 @@ DEPENDENCIES
   bundler (= 1.0.0)
   facebooker2!
   factory_girl_rails
-  memcached-northscale (= 0.19.5.3)
+  memcached-northscale
   mocha
-  pg (= 0.9.0)
+  pg
   rails (= 3.0.0)
-  thin (= 1.2.7)
+  thin
