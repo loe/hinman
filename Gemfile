@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
-gem 'bundler', '1.0.0'
+gem 'rails'
+gem 'bundler'
 gem 'facebooker2', :git => 'git://github.com/loe/facebooker2.git'
 gem 'thin'
 gem 'pg'
