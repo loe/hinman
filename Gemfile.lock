@@ -41,7 +41,7 @@ GEM
     builder (2.1.2)
     crack (0.1.8)
     daemons (1.1.0)
-    dalli (0.9.4)
+    dalli (0.9.5)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     eventmachine (0.12.10)
@@ -53,7 +53,7 @@ GEM
     httparty (0.6.1)
       crack (= 0.1.8)
     i18n (0.4.1)
-    mail (2.2.5)
+    mail (2.2.6.1)
       activesupport (>= 2.3.6)
       mime-types
       treetop (>= 1.4.5)
