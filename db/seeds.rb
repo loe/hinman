@@ -140,7 +140,7 @@ teams = [
     "Russell Coutts",
     "Dennis Connor",
     "Robert Scheidt",
-    "Paul Elvstrøm"
+    "Paul Elvstrom"
   ]
 
 ]
