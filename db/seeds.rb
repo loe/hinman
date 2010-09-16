@@ -149,6 +149,6 @@
   t = Team.create(:name => team)
   
   players.each do |p|
-    t.players.create(:name => p)
+    t.players.create(p)
   end
 end
