@@ -5,7 +5,7 @@ teams = [
     "David Hughes",
     "Adam Roberts",
     "Nick Martin",
-    "Brennan Clark"
+    "Brennan Clark",
     "Molly O'Bryan"
   ],
   
@@ -14,7 +14,7 @@ teams = [
     "Stuart McNay",
     "Thomas Barrows",
     "Emmet Smith",
-    "Maria Menninger"
+    "Maria Menninger",
     "Michael Hession"
   ],
   
