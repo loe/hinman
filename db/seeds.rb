@@ -1,4 +1,5 @@
-teams = [
+# coding: utf-8
+{
   
   "San Diego Yacht Club" => [
     "Mikee Anderson Mitterling",
@@ -140,12 +141,11 @@ teams = [
     "Russell Coutts",
     "Dennis Connor",
     "Robert Scheidt",
-    "Paul Elvstrom"
+    "Sir Thomas Lipton",
+    "Paul Elvstrøm"
   ]
 
-]
-
-teams.each do |team, players|
+}.each do |team, players|
   t = Team.create(:name => team)
   
   players.each do |p|
