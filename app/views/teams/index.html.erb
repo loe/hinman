@@ -11,13 +11,11 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Bio</th>
   </tr>
 
 <% @teams.each do |team| %>
   <tr>
     <td><%= team.name %></td>
-    <td><%= team.bio %></td>
     <td><%= link_to 'Show', team %></td>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete %></td>
