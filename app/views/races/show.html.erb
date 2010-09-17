@@ -19,8 +19,8 @@
 <p>
   <b>Teams:</b>
   <ul>
-    <% @race.teams.each do |t| %>
-    <li><%= link_to(t.name, team_path(t)) %></li>
+    <% @race.entries.each do |entry| %>
+    <li><%= link_to(entry.team.name, team_path(entry.team)) %> (<%= entry.fleet.color %>)</li>
     <% end %>
   </ul>
 </p>

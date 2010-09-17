@@ -15,7 +15,9 @@ class Rotation < ActiveRecord::Base
   
   def build_races
     list = teams.present? ? Team.find(teams) : Team.all
+    fleets = Fleet.all
     
+    next_entry = 0
     while list.present? do
       # Shift off the team.
       home = list.shift
@@ -23,8 +25,10 @@ class Rotation < ActiveRecord::Base
       # This team races everyone left.
       list.each do |away|
         race = races.build
-        race.entries.build(:team => home)
-        race.entries.build(:team => away)
+        race.entries.build(:team => home, :fleet => fleets.at(next_entry % fleets.size))
+        next_entry = next_entry + 1
+        race.entries.build(:team => away, :fleet => fleets.at(next_entry % fleets.size))
+        next_entry = next_entry + 1
       end
     end
   end

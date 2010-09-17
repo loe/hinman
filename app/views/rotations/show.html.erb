@@ -20,7 +20,7 @@
 <% @rotation.races.each do |race| %>
   <tr>
     <td><%= link_to(race.id, rotation_race_path(@rotation, race)) %></td>
-    <td><%= link_to(race.entries.first.team.name, team_path(race.entries.first.team)) %> vs <%= link_to(race.entries.last.team.name, team_path(race.entries.last.team)) %></td>
+    <td><%= link_to(race.entries.first.team.name, team_path(race.entries.first.team)) %> (<%= race.entries.first.fleet.color %>) vs <%= link_to(race.entries.last.team.name, team_path(race.entries.last.team)) %> (<%= race.entries.last.fleet.color %>)</td>
   </tr>
 <% end %>
 </table>

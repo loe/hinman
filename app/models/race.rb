@@ -1,5 +1,7 @@
 class Race < ActiveRecord::Base
   
+  default_scope :order => 'id ASC'
+  
   belongs_to :rotation
   
   has_many :entries, :dependent => :destroy
