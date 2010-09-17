@@ -152,3 +152,8 @@
     t.players.create(p)
   end
 end
+
+['Blue', 'Pink', 'Black', 'Orange', 'Red', 'White', 'Yellow', 'Grey'].each do |color|
+  fleet = Fleet.create(:color => color)
+  3.times { fleet.boats.create }
+end
