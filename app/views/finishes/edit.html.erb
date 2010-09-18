@@ -1,6 +1,6 @@
 <% page_title 'Finish', @race.name, 'Races' %>
 
-<%= form_for(@race, :url => rotation_race_finish_path(@race.rotation, @race), :html => { :method => :put }) do |f| %>
+<%= form_for(setup_finishes(@race), :url => rotation_race_finish_path(@race.rotation, @race), :html => { :method => :put }) do |race_form| %>
 
 <table>
   <tr>
@@ -15,14 +15,14 @@
   </tr>
   <tr>
     <td>Penalties</td>
-    <td><%= f.text_field :home_penalty %></td>
-    <td><%= f.text_field :away_penalty %></td>
+    <td><%= race_form.text_field :home_penalty %></td>
+    <td><%= race_form.text_field :away_penalty %></td>
   </tr>
   <tr>
     <td>Postions</td>
     <td colspan="2">
       <ol>
-        <%= field_for :finishes do |finish_form| %>
+        <%= race_form.fields_for :finishes do |finish_form| %>
           <li><%= finish_form.text_field :position %></li>
         <% end %>
       </ol>
@@ -36,7 +36,7 @@
 </table>
 
 <p>
-  <%= f.submit 'Record Finishes' %>
+  <%= race_form.submit 'Record Finishes' %>
 </p>
 
 <% end %>

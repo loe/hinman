@@ -3,7 +3,6 @@ class FinishesController < ApplicationController
   before_filter :load_race
   
   def edit
-    
   end
   
   def update
