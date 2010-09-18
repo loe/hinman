@@ -22,7 +22,7 @@
     <td>Postions</td>
     <td colspan="2">
       <ol>
-        <%= race_form.fields_for :finishes do |finish_form| %>
+        <%= race_form.fields_for :finish, @race.finishes do |finish_form| %>
           <li><%= finish_form.text_field :position %></li>
         <% end %>
       </ol>
