@@ -1,0 +1,2 @@
+class FinishesController < ApplicationController
+end
