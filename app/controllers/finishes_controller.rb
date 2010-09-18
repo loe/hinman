@@ -2,23 +2,11 @@ class FinishesController < ApplicationController
   
   before_filter :load_race
   
-  def show
+  def edit
     
   end
   
-  def new
-  end
-  
-  def create
-  end
-  
-  def edit
-  end
-  
   def update
-  end
-  
-  def destroy
   end
   
   protected

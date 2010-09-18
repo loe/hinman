@@ -7,23 +7,42 @@
 <% end %>
 
 <p>
-  <b>ID:</b>
-  <%= @race.name %>
-</p>
-
-<p>
   <b>Rotation:</b>
-  <%= link_to(@rotation.name, rotation_path(@rotation)) %>
+  <%= link_to(@race.rotation.name, rotation_path(@race.rotation)) %>
 </p>
 
-<p>
-  <b>Teams:</b>
-  <ul>
-    <% @race.entries.each do |entry| %>
-    <li><%= link_to(entry.team.name, team_path(entry.team)) %> (<%= entry.fleet.color %>)</li>
-    <% end %>
-  </ul>
-</p>
+<table>
+  <tr>
+    <th>Team</th>
+    <th><%= link_to(@race.home.team.name, team_path(@race.home.team)) %></th>
+    <th><%= link_to(@race.away.team.name, team_path(@race.away.team)) %></th>
+  </tr>
+  <tr>
+    <td>Fleet</td>
+    <td><%= @race.home.fleet.color %> (<%= @race.home.fleet.boats.map(&:bow).join(', ') %>)</td>
+    <td><%= @race.away.fleet.color %> (<%= @race.away.fleet.boats.map(&:bow).join(', ') %>)</td>
+  </tr>
+  <tr>
+    <td>Penalties</td>
+    <td><%= @race.home_penalty %></td>
+    <td><%= @race.away_penalty %></td>
+  </tr>
+  <tr>
+    <td>Postions</td>
+    <td colspan="2">
+      <ol>
+        <% @race.finishes.each do |finish| %>
+          <li><%= finish.boat.bow %></li>
+        <% end %>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td><%= @race.home_total %></td>
+    <td><%= @race.away_total %></td>
+  </tr>
+</table>
 
 <fb:comments></fb:comments>
 
