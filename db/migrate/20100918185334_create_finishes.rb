@@ -2,8 +2,8 @@ class CreateFinishes < ActiveRecord::Migration
   def self.up
     create_table :finishes do |t|
       t.integer     :position
-      t.references  :races
-      t.references  :boats
+      t.references  :race
+      t.references  :boat
       t.timestamps
     end
   end

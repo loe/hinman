@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100918185334) do
+ActiveRecord::Schema.define(:version => 20100918192711) do
 
   create_table "boats", :force => true do |t|
     t.integer  "bow"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(:version => 20100918185334) do
 
   create_table "finishes", :force => true do |t|
     t.integer  "position"
-    t.integer  "races_id"
-    t.integer  "boats_id"
+    t.integer  "race_id"
+    t.integer  "boat_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -62,6 +62,8 @@ ActiveRecord::Schema.define(:version => 20100918185334) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "rotation_id"
+    t.integer  "home_penalty", :default => 0
+    t.integer  "away_penalty", :default => 0
   end
 
   add_index "races", ["rotation_id"], :name => "index_races_on_rotation_id"
