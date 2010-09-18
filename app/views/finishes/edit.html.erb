@@ -19,11 +19,11 @@
     <td><%= race_form.text_field :away_penalty %></td>
   </tr>
   <tr>
-    <td>Postions</td>
+    <td>Positions</td>
     <td colspan="2">
       <ol>
         <%= race_form.fields_for :finish, @race.finishes do |finish_form| %>
-          <li><%= finish_form.text_field :position %></li>
+          <li><%= finish_form.text_field :boat %></li>
         <% end %>
       </ol>
     </td>
@@ -41,5 +41,4 @@
 
 <% end %>
 
-<%= link_to 'Edit', edit_rotation_race_path(@race.rotation, @race) %> |
-<%= link_to 'Back', rotation_races_path(@race.rotation) %>
+<%= link_to 'Back', rotation_race_path(@race.rotation, @race) %>
