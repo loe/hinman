@@ -12,20 +12,7 @@ class PlayersControllerTest < ActionController::TestCase
     assert_not_nil assigns(:team)
     assert_not_nil assigns(:players)
   end
-
-  test "should get new" do
-    get :new, :team_id => @player.team.to_param
-    assert_response :success
-  end
-
-  test "should create player" do
-    assert_difference('Player.count') do
-      post :create, :team_id => @player.team.to_param, :player => Factory.attributes_for(:player)
-    end
-
-    assert_redirected_to team_player_path(assigns(:team), assigns(:player))
-  end
-
+  
   test "should show player" do
     get :show, :team_id => @player.team.to_param, :id => @player.to_param
     assert_response :success
@@ -39,13 +26,5 @@ class PlayersControllerTest < ActionController::TestCase
   test "should update player" do
     put :update, :team_id => @player.team.to_param, :id => @player.to_param, :player => { }
     assert_redirected_to team_player_path(assigns(:team), assigns(:player))
-  end
-
-  test "should destroy player" do
-    assert_difference('Player.count', -1) do
-      delete :destroy, :team_id => @player.team.to_param, :id => @player.to_param
-    end
-
-    assert_redirected_to team_players_path(assigns(:team))
   end
 end

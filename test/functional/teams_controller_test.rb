@@ -12,19 +12,6 @@ class TeamsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:teams)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create team" do
-    assert_difference('Team.count') do
-      post :create, :team => Factory.attributes_for(:team)
-    end
-
-    assert_redirected_to team_path(assigns(:team))
-  end
-
   test "should show team" do
     get :show, :id => @team.to_param
     assert_response :success
@@ -38,13 +25,5 @@ class TeamsControllerTest < ActionController::TestCase
   test "should update team" do
     put :update, :id => @team.to_param, :team => { }
     assert_redirected_to team_path(assigns(:team))
-  end
-
-  test "should destroy team" do
-    assert_difference('Team.count', -1) do
-      delete :destroy, :id => @team.to_param
-    end
-
-    assert_redirected_to teams_path
   end
 end
