@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class RotationTest < ActiveSupport::TestCase
-
+  
+  def setup
+    ['Blue', 'Pink', 'Black', 'Orange', 'Red', 'White', 'Yellow', 'Grey'].each do |color|
+      Factory.create(:fleet, :color => color)
+    end
+  end
+  
   test "should require a name" do
     team = Factory.build(:rotation, :name => nil)
     assert !team.valid?
