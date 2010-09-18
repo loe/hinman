@@ -8,7 +8,9 @@ Hinman::Application.routes.draw do
   end
   
   resources :rotations do
-    resources :races
+    resources :races do
+      resource :finish
+    end
   end  
   
   match '/' => 'teams#index'
