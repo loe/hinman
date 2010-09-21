@@ -32,7 +32,7 @@ class RotationsController < ApplicationController
   def update
     @rotation = Rotation.find(params[:id])
 
-   if @rotation.update_attributes(params[:Rotation])
+   if @rotation.update_attributes(params[:rotation])
       flash[:notice] = 'Rotation was successfully updated.'
       redirect_to(@rotation)
     else
