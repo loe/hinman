@@ -50,5 +50,10 @@ class Race < ActiveRecord::Base
   end
   
   def finish_attributes=(attributes)
+    attributes.each do |key, value|
+      finish = finishes.find_or_create_by_position(key.to_i + 1)
+      finish.boat = Boat.where(:bow => value[:boat][:bow])
+      finish.save!
+    end
   end
 end

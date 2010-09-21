@@ -14,7 +14,7 @@ class FinishesController < ApplicationController
   end
   
   protected
-    
+  
   def load_race
     @race = Race.find(params[:race_id])
   end

@@ -23,7 +23,9 @@
     <td colspan="2">
       <ol>
         <%= race_form.fields_for :finish, @race.finishes do |finish_form| %>
-          <li><%= finish_form.text_field :boat %></li>
+          <%= finish_form.fields_for :boat, finish_form.object.boat do |boat_form| %>
+            <li><%= boat_form.text_field :bow %></li>
+          <% end %>
         <% end %>
       </ol>
     </td>
