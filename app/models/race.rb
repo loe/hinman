@@ -42,10 +42,12 @@ class Race < ActiveRecord::Base
   end
   
   def winner
+    return nil if home_total == away_total
     (home_total < away_total) ? home : away
   end
   
   def loser
+    return nil if home_total == away_total
     (home_total > away_total) ? home : away
   end
   
