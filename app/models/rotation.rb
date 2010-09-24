@@ -5,7 +5,7 @@ class Rotation < ActiveRecord::Base
   has_many :races, :dependent => :destroy
   has_many :entries, :through => :races
   
-  validates_presence_of :name
+  validates_presence_of :name, :participation_value
   
   before_create :build_races
   

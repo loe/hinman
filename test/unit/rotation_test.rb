@@ -9,8 +9,13 @@ class RotationTest < ActiveSupport::TestCase
   end
   
   test "should require a name" do
-    team = Factory.build(:rotation, :name => nil)
-    assert !team.valid?
+    rotation = Factory.build(:rotation, :name => nil)
+    assert !rotation.valid?
+  end
+
+  test "should require a participation_value" do
+    rotation = Factory.build(:rotation, :participation_value => nil)
+    assert !rotation.valid?
   end
   
   test "should create 6 Races for a 4 Team Rotation" do
