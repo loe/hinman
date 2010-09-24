@@ -15,7 +15,7 @@
     {:name => "Janel Zarkowsky", :bio => "Annapolis, MD USA"},
     {:name => "Clinton Hayes", :bio => "East Haddam, CT USA"},
     {:name => "Christine Bletzer", :bio => "Medfield, MA USA"},
-    {:name => "Billy Martin", :bio => ""},
+    {:name => "Billy Martin", :bio => "Riverton, NJ"},
     {:name => "Emily Anderson", :bio => "Northport, NY USA"}
   ],
   
