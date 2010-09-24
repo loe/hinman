@@ -1,4 +1,3 @@
 Factory.define :boat do |b|
-  b.association :fleet
-  b.bow '42'
+  b.sequence(:bow) {|n| n }
 end

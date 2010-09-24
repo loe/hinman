@@ -3,5 +3,5 @@ Factory.define :race do |r|
 end
 
 Factory.define :sideshow_vs_panda, :parent => :race do |r|
-  r.entries { |r| [r.association(:entry, :team => Factory(:sideshow)), r.association(:entry, :team => Factory(:panda))] }
+  r.entries { |r| [r.association(:entry, :team => Factory(:sideshow), :fleet => Factory(:fleet, :color => 'Green')), r.association(:entry, :team => Factory(:panda), :fleet => Factory(:fleet, :color => 'Blue'))] }
 end

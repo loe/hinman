@@ -3,7 +3,7 @@ require 'test_helper'
 class BoatsControllerTest < ActionController::TestCase
   
   def setup
-    @boat = Factory(:boat)
+    @boat = Factory(:boat, :fleet => Factory(:fleet))
   end
   
   test "should get index" do
