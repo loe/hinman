@@ -6,7 +6,7 @@
   <meta property="og:description" content="All Teams" />
 <% end %>
 
-<h1>Automate Page Title</h1>
+<h1>Teams</h1>
 
 <table>
   <thead>
@@ -14,11 +14,11 @@
       <th>Name</th>
     </tr>
   </thead>
-  <% @teams.each do |team| %>
-    <tbody>
+  <tbody>
+    <% @teams.each do |team| %>
       <tr class="<%= cycle("even", "odd") %>">
         <td><%= link_to(team.name, team_path(team)) %></td>
       </tr>
-    </tbody>
-  <% end %>
+    <% end %>
+  </tbody>
 </table>
