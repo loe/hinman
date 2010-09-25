@@ -6,16 +6,19 @@
   <meta property="og:description" content="All Teams" />
 <% end %>
 
-<h1>Listing Teams</h1>
+<h1>Teams</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-  </tr>
-
-<% @teams.each do |team| %>
-  <tr>
-    <td><%= link_to(team.name, team_path(team)) %></td>
-  </tr>
-<% end %>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <% @teams.each do |team| %>
+    <tbody>
+      <tr>
+        <td><%= link_to(team.name, team_path(team)) %></td>
+      </tr>
+    </tbody>
+  <% end %>
 </table>
