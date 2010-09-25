@@ -1,7 +1,17 @@
+html, body { height: 100%; }
+
 body {
-  font: normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #444;
+  font: normal 16px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
 }
 
+a:link, a:visited {
+  color: #1e3062;
+  text-decoration: none;
+}
+
+a:hover, a:active { color: #5d7acd; }
 
 /* =FLOATS */
 
@@ -19,57 +29,96 @@ nav:after {
 /* =NAV */
 
 nav {
-  background: #1e3062;
+  background-color: #1e3062;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 nav li { float: left; }
-nav a { color: #fff; }
+
+nav a:link, nav a:visited {
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+nav a:hover { color: #728faf; }
 
 /* =SECTION */
 
 section {
-  float: left;
-  width: 70%;
+  bottom: 40px;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  z-index: 0;
 }
-
-/* =ASIDE */
-
-aside {
-  float: left;
-  width: 30%;
-}
-
-/* =HEADINGS */
 
 h1 { letter-spacing: -.05em; }
 
 h1 {
   font-size: 30px;
   line-height: 30px;
+  padding: 20px 20px 30px 20px;
 }
+
+/* =ARTICLE */
+
+article {
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  width: 70%;
+}
+
+/* =ASIDE */
+
+aside {
+  background: #eee;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  top: 60px;
+  width: 30%;
+}
+
+aside .interior { padding: 20px; }
+
+/* =FOOTER */
+
+footer {
+  background-color: #1e3062;
+  bottom: 0;
+  color: #9eafe1;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+footer p { font: italic 16px/20px Georgia, serif; }
 
 /* =TABLES */
 
-table {
-	width: 100%;
-}
-
-/*thead tr { border: 0; }*/
+table { width: 100%; }
 
 thead th {
-	background: #d4d4d4 url("/shared/images/bg_th.png") bottom repeat-x;
-	color: #646464;
-	padding: 3px 9px;
-	border-top: 0;
-	border-bottom: 1px solid #828282;
-	border-left: 1px solid #828282;
-	text-align: left;
+  color: #bbb;
+  font-size: 13px;
+  padding: 3px 20px;
+  text-align: left;
+  text-transform: uppercase;
 }
 
-thead th { white-space: nowrap; }
-tr { border-top: 1px solid #eee; }
-
-td {
-  border: 1px solid #000;
-  padding: 10px;
-}
+thead tr { border-bottom: 1px solid rgba(0, 0, 0, .05); }
+tr { border-bottom: 1px solid #dfe5f5; }
+tr.odd { background-color: #eceff9; }
+td { padding: 10px 20px; }

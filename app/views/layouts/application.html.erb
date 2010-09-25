@@ -20,22 +20,27 @@
     </ul>
   </nav>
 
-  <section class="conent">
+  <section>
     <p style="color: blue"><%= flash[:info] %></p>
     <p style="color: red"><%= flash[:error] %></p>
     <p style="color: green"><%= flash[:notice] %></p>
-    <%= yield %>
+
+    <article>
+      <%= yield %>
+    </article>
+
+    <aside>
+      <div class="interior">
+        <% if current_facebook_user %>
+          <fb:live-stream width="300"></fb:live-stream>
+        <% else %>
+          <fb:login-button show-faces="true" width="300" max-rows="4"></fb:login-button>
+        <% end %>
+      </div>
+    </aside>
   </section>
 
-  <aside>
-    <% if current_facebook_user %>
-      <fb:live-stream width="300"></fb:live-stream>
-    <% else %>
-      <fb:login-button show-faces="true" width="300" max-rows="4"></fb:login-button>
-    <% end %>
-  </aside>
-
-  <footer>2010 US Team Racing Championship</footer>
+  <footer><p>&copy; 2010 US Team Racing Championship</p></footer>
 
   <%= render(:partial => 'shared/javascript') %>
 
