@@ -12,8 +12,8 @@
   <thead>
     <tr>
       <th>Team</th>
-      <th><%= link_to(@race.home.team.name, team_path(@race.home.team)) %> <%= winner_or_loser(@race, @race.home) %></th>
-      <th><%= link_to(@race.away.team.name, team_path(@race.away.team)) %> <%= winner_or_loser(@race, @race.away) %></th>
+      <th><%= winner_or_loser(@race, @race.home) %> <%= link_to(@race.home.team.name, team_path(@race.home.team)) %></th>
+      <th><%= winner_or_loser(@race, @race.away) %> <%= link_to(@race.away.team.name, team_path(@race.away.team)) %></th>
     </tr>
   </thead>
   <tbody>
