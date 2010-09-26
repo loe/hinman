@@ -6,14 +6,13 @@
   <meta property="og:description" content="<%= @player.bio %>" />
 <% end %>
 
-<h1><%= @player.name %> <fb:like layout="button_count" show_faces="false"></fb:like></h1>
+<h1><%= @player.name %></h1>
+<div class="button"><fb:like layout="button_count" show_faces="false"></fb:like></div>
+<h2>of <%= link_to(@team.name, team_path(@team)) %></h2>
 
-<p>
-  <b>Bio:</b>
-  <%= @player.bio %>
-</p>
-
-<p>
-  <b>Team:</b>
-  <%= link_to(@team.name, team_path(@team)) %>
-</p>
+<h3>Representing <%= @player.bio %></h3>
+ 
+<h3>Comments</h3>
+<div class="comments">
+  <fb:comments></fb:comments>
+</div>
