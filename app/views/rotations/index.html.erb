@@ -20,9 +20,9 @@
   <tbody>
     <% @rotations.each do |rotation| %>
       <% rotation.entries.map(&:team).uniq.each do |team| %>
-        <tr class="<%= cycle("odd", "even") %>">
+        <tr class="<%= cycle("odd", "") %>">
           <td><%= link_to(team.name, team_path(team)) %></td>
-          <td><%= team.win_percentage(rotation) %></td>
+          <td><%= team_stats(rotation, team) %></td>
         </tr>
       <% end %>
     <% end %>
