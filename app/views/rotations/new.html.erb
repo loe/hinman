@@ -19,7 +19,7 @@
     <%= f.label :teams %><br />
     <ul>
       <% @teams.each do |team| %>
-      <li> <%= check_box_tag :'rotation[teams][]', team.id, true, :id => "rotation_team_#{team.id}" %><%= link_to(team.name, team_path(team)) %></li>
+      <li> <%= check_box_tag :'rotation[teams][]', team.id, @rotation.teams.include?(team.id.to_s), :id => "rotation_team_#{team.id}" %><%= link_to(team.name, team_path(team)) %></li>
       <% end %>
     </ul>
   </p>
@@ -27,7 +27,7 @@
     <%= f.label :fleets %><br />
     <ul>
       <% @fleets.each do |fleet| %>
-      <li> <%= check_box_tag :'rotation[fleets][]', fleet.id, true, :id => "rotation_fleet_#{fleet.id}" %><%= link_to(fleet.color, fleet_path(f)) %></li>
+      <li> <%= check_box_tag :'rotation[fleets][]', fleet.id, @rotation.fleets.include?(fleet.id.to_s), :id => "rotation_fleet_#{fleet.id}" %><%= link_to(fleet.color, fleet_path(f)) %></li>
       <% end %>
     </ul>
   </p>

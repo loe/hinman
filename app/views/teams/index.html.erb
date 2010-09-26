@@ -16,7 +16,7 @@
   </thead>
   <tbody>
     <% @teams.each do |team| %>
-      <tr class="<%= cycle("even", "odd") %>">
+      <tr class="<%= cycle("odd", "even") %>">
         <td><%= link_to(team.name, team_path(team)) %></td>
       </tr>
     <% end %>

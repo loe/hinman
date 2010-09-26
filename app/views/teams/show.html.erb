@@ -16,7 +16,7 @@
   </thead>
   <tbody>
     <% @team.players.each do |p| %>
-      <tr class="<%= cycle("even", "odd") %>">
+      <tr class="<%= cycle("odd", "even") %>">
         <td><%= link_to(p.name, team_player_path(@team, p)) %></td>
       </tr>
     <% end %>

@@ -6,23 +6,23 @@
   <meta property="og:description" content="<%= @rotation.participants %>" />
 <% end %>
 
-<p>
-  <b>Name:</b>
-  <%= @rotation.name %> <fb:like layout="button_count" show_faces="false"></fb:like>
-</p>
+<h1><%= @rotation.name %> <fb:like layout="button_count" show_faces="false"></fb:like></h1>
 
 <table>
-  <tr>
-    <th>Race</th>
-    <th>Teams</th>
-  </tr>
-
-<% @rotation.races.each do |race| %>
-  <tr>
-    <td><%= link_to(race.id, rotation_race_path(@rotation, race)) %></td>
-    <td><%= link_to(race.home.team.name, team_path(race.home.team)) %> (<%= race.home.fleet.color %>) vs <%= link_to(race.away.team.name, team_path(race.away.team)) %> (<%= race.away.fleet.color %>)</td>
-  </tr>
-<% end %>
+  <thead>
+    <tr>
+      <th>Race</th>
+      <th>Teams</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rotation.races.each do |race| %>
+      <tr class="<%= cycle("odd", "even") %>">
+        <td><%= link_to(race.id, rotation_race_path(@rotation, race)) %></td>
+        <td><%= link_to(race.home.team.name, team_path(race.home.team)) %> (<%= race.home.fleet.color %>) vs <%= link_to(race.away.team.name, team_path(race.away.team)) %> (<%= race.away.fleet.color %>)</td>
+     </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <%= link_to 'Edit', edit_rotation_path(@rotation) %> |
