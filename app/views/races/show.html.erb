@@ -7,6 +7,10 @@
 <% end %>
 
 <h1><%= @race.name %> (<%= link_to(@race.rotation.name, rotation_path(@race.rotation)) %>)</h1>
+<div class="actions">
+  <%= link_to 'Record Finishes', edit_rotation_race_finish_path(@rotation, @race) %> |
+  <%= link_to 'Back', rotation_path(@rotation) %>
+</div>
 
 <table>
   <thead>
@@ -45,9 +49,7 @@
   </tbody>
 </table>
 
-<%= link_to 'Record Finishes', edit_rotation_race_finish_path(@rotation, @race) %> |
-<%= link_to 'Back', rotation_path(@rotation) %>
-
-<br />
-
-<fb:comments></fb:comments>
+<h3>Comments</h3>
+<div class="comments">
+  <fb:comments></fb:comments>
+</div>

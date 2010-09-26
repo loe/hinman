@@ -6,7 +6,12 @@
   <meta property="og:description" content="<%= @rotation.participants %>" />
 <% end %>
 
-<h1><%= @rotation.name %> <fb:like layout="button_count" show_faces="false"></fb:like></h1>
+<h1><%= @rotation.name %></h1>
+<div class="button"><fb:like layout="button_count" show_faces="false"></fb:like></div>
+<div class="actions">
+  <%= link_to 'Edit', edit_rotation_path(@rotation) %> |
+  <%= link_to 'Back', rotations_path %>
+</div>
 
 <table>
   <thead>
@@ -24,6 +29,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to 'Edit', edit_rotation_path(@rotation) %> |
-<%= link_to 'Back', rotations_path %>
