@@ -20,7 +20,7 @@
   <tbody>
     <% @rotations.each do |rotation| %>
       <% rotation.entries.map(&:team).uniq.each do |team| %>
-        <tr class="<%= cycle("odd", "") %>">
+        <tr class="<%= cycle("odd", "even") %>">
           <td><%= link_to(team.name, team_path(team)) %></td>
           <td><%= team_stats(rotation, team) %></td>
         </tr>
