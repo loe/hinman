@@ -19,7 +19,7 @@
     <% @rotation.races.each do |race| %>
       <tr class="<%= cycle("odd", "even") %>">
         <td><%= link_to(race.id, rotation_race_path(@rotation, race)) %></td>
-        <td><%= link_to(race.home.team.name, team_path(race.home.team)) %> (<%= race.home.fleet.color %>) vs <%= link_to(race.away.team.name, team_path(race.away.team)) %> (<%= race.away.fleet.color %>)</td>
+        <td><%= link_to(race.home.team.name, team_path(race.home.team)) %> <%= winner_or_loser(race, race.home) %> (<%= race.home.fleet.color %>) vs <%= link_to(race.away.team.name, team_path(race.away.team)) %> <%= winner_or_loser(race, race.away) %> (<%= race.away.fleet.color %>)</td>
      </tr>
     <% end %>
   </tbody>

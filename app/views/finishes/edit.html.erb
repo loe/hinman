@@ -2,44 +2,48 @@
 
 <%= form_for(setup_finishes(@race), :url => rotation_race_finish_path(@race.rotation, @race), :html => { :method => :put }) do |race_form| %>
   <%= race_form.error_messages %>
+  
 <table>
-  <tr>
-    <th>Team</th>
-    <th><%= link_to(@race.home.team.name, team_path(@race.home.team)) %></th>
-    <th><%= link_to(@race.away.team.name, team_path(@race.away.team)) %></th>
-  </tr>
-  <tr>
-    <td>Fleet</td>
-    <td><%= @race.home.fleet.color %> (<%= @race.home.fleet.boats.map(&:bow).join(', ') %>)</td>
-    <td><%= @race.away.fleet.color %> (<%= @race.away.fleet.boats.map(&:bow).join(', ') %>)</td>
-  </tr>
-  <tr>
-    <td>Penalties</td>
-    <td><%= race_form.text_field :home_penalty %></td>
-    <td><%= race_form.text_field :away_penalty %></td>
-  </tr>
-  <tr>
-    <td>Positions</td>
-    <td colspan="2">
-      <ol>
-        <%= race_form.fields_for :finish, @race.finishes do |finish_form| %>
-          <%= finish_form.fields_for :boat, finish_form.object.boat do |boat_form| %>
-            <li><%= boat_form.text_field :bow %></li>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th><%= link_to(@race.home.team.name, team_path(@race.home.team)) %></th>
+      <th><%= link_to(@race.away.team.name, team_path(@race.away.team)) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>Fleet</td>
+      <td><%= @race.home.fleet.color %> (<%= @race.home.fleet.boats.map(&:bow).join(', ') %>)</td>
+      <td><%= @race.away.fleet.color %> (<%= @race.away.fleet.boats.map(&:bow).join(', ') %>)</td>
+    </tr>
+    <tr class="even">
+      <td>Penalties</td>
+      <td><%= race_form.text_field :home_penalty %></td>
+      <td><%= race_form.text_field :away_penalty %></td>
+    </tr>
+    <tr class="odd">
+      <td>Positions</td>
+      <td colspan="2">
+        <ol>
+          <%= race_form.fields_for :finish, @race.finishes do |finish_form| %>
+            <%= finish_form.fields_for :boat, finish_form.object.boat do |boat_form| %>
+              <li><%= boat_form.text_field :bow %></li>
+            <% end %>
           <% end %>
-        <% end %>
-      </ol>
-    </td>
-  </tr>
-  <tr>
-    <td>Total</td>
-    <td><%= @race.home_total %></td>
-    <td><%= @race.away_total %></td>
-  </tr>
+        </ol>
+      </td>
+    </tr>
+    <tr class="even">
+      <td>Total</td>
+      <td><%= @race.home_total %></td>
+      <td><%= @race.away_total %></td>
+    </tr>
+    <tr>
+      <td colspan="4" class="odd"><%= race_form.submit 'Record Finishes' %></td>
+    </tr>
+  </tbody>
 </table>
-
-<p>
-  <%= race_form.submit 'Record Finishes' %>
-</p>
 
 <% end %>
 

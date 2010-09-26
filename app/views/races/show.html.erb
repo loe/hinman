@@ -6,42 +6,43 @@
   <meta property="og:description" content="<%= @race.results %>" />
 <% end %>
 
-<p>
-  <b>Rotation:</b>
-  <%= link_to(@race.rotation.name, rotation_path(@race.rotation)) %>
-</p>
+<h1><%= @race.name %> (<%= link_to(@race.rotation.name, rotation_path(@race.rotation)) %>)</h1>
 
 <table>
-  <tr>
-    <th>Team</th>
-    <th><%= link_to(@race.home.team.name, team_path(@race.home.team)) %></th>
-    <th><%= link_to(@race.away.team.name, team_path(@race.away.team)) %></th>
-  </tr>
-  <tr>
-    <td>Fleet</td>
-    <td><%= @race.home.fleet.color %> (<%= @race.home.fleet.boats.map(&:bow).join(', ') %>)</td>
-    <td><%= @race.away.fleet.color %> (<%= @race.away.fleet.boats.map(&:bow).join(', ') %>)</td>
-  </tr>
-  <tr>
-    <td>Penalties</td>
-    <td><%= @race.home_penalty %></td>
-    <td><%= @race.away_penalty %></td>
-  </tr>
-  <tr>
-    <td>Postions</td>
-    <td colspan="2">
-      <ol>
-        <% @race.finishes.each do |finish| %>
-          <li><%= finish.boat.bow %></li>
-        <% end %>
-      </ol>
-    </td>
-  </tr>
-  <tr>
-    <td>Total</td>
-    <td><%= @race.home_total %></td>
-    <td><%= @race.away_total %></td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th><%= link_to(@race.home.team.name, team_path(@race.home.team)) %> <%= winner_or_loser(@race, @race.home) %></th>
+      <th><%= link_to(@race.away.team.name, team_path(@race.away.team)) %> <%= winner_or_loser(@race, @race.away) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>Fleet</td>
+      <td><%= @race.home.fleet.color %> (<%= @race.home.fleet.boats.map(&:bow).join(', ') %>)</td>
+      <td><%= @race.away.fleet.color %> (<%= @race.away.fleet.boats.map(&:bow).join(', ') %>)</td>
+    </tr>
+    <tr class="even">
+      <td>Penalties</td>
+      <td><%= @race.home_penalty %></td>
+      <td><%= @race.away_penalty %></td>
+    </tr>
+    <tr class="odd">
+      <td>Postions</td>
+      <td colspan="2">
+        <ol>
+          <% @race.finishes.each do |finish| %>
+            <li><%= finish.boat.bow %></li>
+          <% end %>
+        </ol>
+      </td>
+    </tr>
+    <tr class="even">
+      <td>Total</td>
+      <td><%= @race.home_total %></td>
+      <td><%= @race.away_total %></td>
+    </tr>
+  </tbody>
 </table>
 
 <%= link_to 'Record Finishes', edit_rotation_race_finish_path(@rotation, @race) %> |
