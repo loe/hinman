@@ -5,8 +5,8 @@ require 'rails/test_help'
 class ActiveSupport::TestCase
   
   def score_sideshow_vs_panda
-    @rotation = Factory.create(:rotation)
-    @race = Factory.create(:sideshow_vs_panda, :rotation => @rotation)
+    @race = Factory.create(:sideshow_vs_panda)
+    @rotation = @race.rotation
     home_boats = @race.home.fleet.boats.map(&:bow)
     away_boats = @race.away.fleet.boats.map(&:bow)
     
@@ -18,6 +18,8 @@ class ActiveSupport::TestCase
       '4' => {:boat => {:bow => away_boats.pop}},
       '5' => {:boat => {:bow => home_boats.pop}}
     }
+    
+    @race.fleets(true) # Necessary to load the boats up.
 
     @race.save!
   end

@@ -9,6 +9,8 @@ class Race < ActiveRecord::Base
   has_many :fleets, :through => :entries
   has_many :finishes, :dependent => :destroy
   
+  validate :bows_in_fleets
+  
   def name
     "#{id} - #{home.team.name} vs. #{away.team.name}"
   end
@@ -52,10 +54,18 @@ class Race < ActiveRecord::Base
   end
   
   def finish_attributes=(attributes)
+    finishes.all.map(&:destroy) # This must be a Rails 3 issue, finishes.clear and finishes.delete_all raise ActiveRecord::AssociationTypeMismatch
     attributes.each do |key, value|
-      finish = finishes.find_or_create_by_position(key.to_i + 1)
-      finish.boat = Boat.where(:bow => value[:boat][:bow]).first
-      finish.save!
+      finishes.build(:position => key.to_i + 1, :boat => Boat.where(:bow => value[:boat][:bow]).first)
+    end
+  end
+
+  def bows_in_fleets
+    fleet_bows = fleets.map { |f| f.boats.map(&:bow) }.flatten.sort
+    finish_bows = finishes.map { |f| f.boat.bow }.sort
+
+    unless fleet_bows == finish_bows
+      errors.add(:base, 'sail numbers must be correct')
     end
   end
 end
