@@ -4,7 +4,8 @@ class RotationsController < ApplicationController
   before_filter :find_rotation, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @rotations = Rotation.all
+    @rotations = Rotation.order('id DESC')
+    @teams = Team.all.sort_by { |team| [team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), team.name] }
   end
 
   def show
@@ -48,6 +49,6 @@ class RotationsController < ApplicationController
   end
   
   def find_rotation
-    @rotation = Rotation.find(params[:id])
+    @rotation = Rotation.includes(:races, :entries => [:team, {:fleet => :boats}]).find(params[:id])
   end
 end

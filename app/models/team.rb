@@ -8,9 +8,6 @@ class Team < ActiveRecord::Base
   
   validates_presence_of :name
   
-  def win_percentage(rotation)
-  end
-  
   def rotation_races(rotation)
     races.where(:rotation_id => rotation.id).includes(:entries => {:fleet => :boats})
   end
@@ -26,5 +23,9 @@ class Team < ActiveRecord::Base
   def win_percentage(rotation)
     return 0 if completed_races(rotation).empty?
     (won_races(rotation).length.to_f / completed_races(rotation).length.to_f) * 100
+  end
+
+  def rotations
+    Rotation.joins(:races => :entries).where(:entries => {:team_id => self}).select('DISTINCT rotations.*')
   end
 end
