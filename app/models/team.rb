@@ -13,6 +13,7 @@ class Team < ActiveRecord::Base
   end
   
   def completed_races(rotation)
+    return [] if rotation.nil?
     rotation_races(rotation).select { |race| race.winner }
   end
   
