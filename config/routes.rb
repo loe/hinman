@@ -13,5 +13,5 @@ Hinman::Application.routes.draw do
     end
   end  
   
-  match '/' => 'teams#index'
+  match '/' => 'rotations#index'
 end
