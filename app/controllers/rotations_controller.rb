@@ -8,14 +8,11 @@ class RotationsController < ApplicationController
     @teams = Team.all.sort_by { |team| [-team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), team.name] }
   end
 
-  def show
-  end
+  def show; end
 
-  def new
-  end
+  def new; end
   
-  def edit
-  end
+  def edit; end
   
   def create
     if @rotation.save
