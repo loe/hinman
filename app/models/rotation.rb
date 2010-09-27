@@ -14,12 +14,15 @@ class Rotation < ActiveRecord::Base
   end
   
   def build_races
-    team_list = (teams.present? ? Team.find(teams) : Team).order('color DESC') # Seed by color which was determined at random.
+    team_list = teams.present? ? Team.find(teams) : Team.all
     fleet_list = fleets.present? ? Fleet.find(fleets) : Fleet.all
     
     number_of_races_for_a_team = team_list.length - 1
     next_entry = 0
-
+    team_list.sort_by(&:color)
+    
+    team_list = team_list.dup
+    
     for i in 1..number_of_races_for_a_team
       internal_teams = team_list.dup
       
@@ -27,12 +30,12 @@ class Rotation < ActiveRecord::Base
         race = races.build
         race.entries.build(:team => internal_teams.shift, :fleet => fleet_list.at(next_entry % fleet_list.size))
         next_entry = next_entry + 1
-        race.entries.build(:team => internal_teams.shift, :fleet => fleet_list.at(next_entry % fleet_list.size))
+        race.entries.build(:team => internal_teams.pop, :fleet => fleet_list.at(next_entry % fleet_list.size))
         next_entry = next_entry + 1
       end
-
+      
       team_list.push(team_list.delete_at(1))
     end
-
+    
   end
 end
