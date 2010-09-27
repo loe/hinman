@@ -1,6 +1,6 @@
 class Rotation < ActiveRecord::Base
   
-  attr_accessor :teams, :fleets
+  serialize :teams, :fleets
   
   has_many :races, :dependent => :destroy
   has_many :entries, :through => :races
