@@ -1,5 +1,7 @@
 class Rotation < ActiveRecord::Base
   
+  attr_accessor :new_round
+  
   serialize :teams
   serialize :fleets
   
@@ -9,9 +11,14 @@ class Rotation < ActiveRecord::Base
   validates_presence_of :name, :participation_value
   
   before_create :build_races
+  before_update :build_races, :if => :new_round?
   
   def participants
     entries.map { |e| e.team.name }.uniq.sort.to_sentence
+  end
+
+  def new_round?
+    new_round.to_i != 0
   end
   
   def build_races

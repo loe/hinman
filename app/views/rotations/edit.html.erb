@@ -16,6 +16,20 @@
   </p>
   
   <p>
+    <%= f.label :fleets %><br />
+    <ul>
+      <% @fleets.each do |fleet| %>
+      <li> <%= check_box_tag :'rotation[fleets][]', fleet.id, @rotation.fleets.include?(fleet.id.to_s), :id => "rotation_fleet_#{fleet.id}" %><%= link_to(fleet.color, fleet_path(f)) %></li>
+      <% end %>
+    </ul>
+  </p>
+  
+  <p>
+    <%= f.label :new_round %><br />
+    <%= f.check_box :new_round %>
+  </p>
+
+  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>

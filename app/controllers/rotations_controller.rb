@@ -12,7 +12,9 @@ class RotationsController < ApplicationController
 
   def new; end
   
-  def edit; end
+  def edit
+    @fleets = Fleet.all
+  end
   
   def create
     if @rotation.save
