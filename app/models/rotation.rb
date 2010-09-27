@@ -21,8 +21,6 @@ class Rotation < ActiveRecord::Base
     next_entry = 0
     team_list.sort_by(&:color)
     
-    team_list = team_list.dup
-    
     for i in 1..number_of_races_for_a_team
       internal_teams = team_list.dup
       
