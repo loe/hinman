@@ -1,6 +1,7 @@
 class Rotation < ActiveRecord::Base
   
-  serialize :teams, :fleets
+  serialize :teams
+  serialize :fleets
   
   has_many :races, :dependent => :destroy
   has_many :entries, :through => :races
