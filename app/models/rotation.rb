@@ -40,6 +40,12 @@ class Rotation < ActiveRecord::Base
         next_entry = next_entry + 1
       end
       
+      # Roll the fleet list.
+      (fleet_list.size / 2).times do
+        fleet_list.concat(fleet_list.slice!(0, 2).reverse)
+      end
+      
+      # Cycle the teams
       team_list.push(team_list.delete_at(1))
     end
     
