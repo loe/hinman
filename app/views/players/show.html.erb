@@ -8,6 +8,6 @@
 
 <h1><%= @player.name %></h1>
 <div class="button"><fb:like layout="button_count" show_faces="false"></fb:like></div>
-<h2>of <%= link_to(@team.name, team_path(@team)) %></h2>
+<h2>of <%= @player.bio %></h2>
 
-<h3>Representing <%= @player.bio %></h3>
+<h3>Representing <%= link_to(@team.name, team_path(@team)) %></h3>
