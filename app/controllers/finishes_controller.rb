@@ -6,8 +6,8 @@ class FinishesController < ApplicationController
   
   def update
     if @race.update_attributes(params[:race])
-      flash[:notice] = "Results Race ##{@race.id} successfully recorded."
-      redirect_to(rotation_race_path(@race.rotation, @race))
+      flash[:notice] = "Results for Race ##{@race.id} successfully recorded."
+      redirect_to(edit_rotation_race_finish_path(@race.rotation, @race.next))
     else
       render(:action => "edit")
     end

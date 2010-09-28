@@ -15,6 +15,10 @@ class Race < ActiveRecord::Base
     "#{id} - #{home.team.name} vs. #{away.team.name}"
   end
   
+  def next
+    rotation.races.where(Race.arel_table[:id].gt(id)).first || self
+  end
+  
   def home
     entries.first
   end
