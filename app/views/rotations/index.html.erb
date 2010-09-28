@@ -8,9 +8,12 @@
 
 <h1>Rotations &amp; Rankings</h1>
 
+<h2><%= Time.now.to_s(:long) %></h2>
+
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Rankings</th>
       <% @rotations.each do |rotation| %>
       <th><%= link_to(rotation.name, rotation_path(rotation)) %> (<%= link_to 'Edit', edit_rotation_path(rotation) %> | <%= link_to 'Destroy', rotation, :confirm => 'Are you sure?', :method => :delete %>)</th>
@@ -18,8 +21,9 @@
     </tr>
   </thead>
   <tbody>
-    <% @teams.each do |team| %>
+    <% @teams.each_with_index do |team, i| %>
       <tr class="<%= cycle("odd", "even") %>">
+        <td><%= i + 1 %></td>
         <td><%= link_to(team.name, team_path(team)) %></td>
         <% @rotations.each do |rotation| %>
           <td><%= team_stats(rotation, team) %></td>
