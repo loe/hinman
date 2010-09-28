@@ -1,5 +1,11 @@
 <% page_title 'Finish', @race.name, 'Races' %>
 
+<h1><%= @race.name %> (<%= link_to(@race.rotation.name, rotation_path(@race.rotation)) %>)</h1>
+
+<div class="actions">
+  <%= link_to 'Back', rotation_race_path(@race.rotation, @race) %>
+</div>
+
 <%= form_for(setup_finishes(@race), :url => rotation_race_finish_path(@race.rotation, @race), :html => { :method => :put }) do |race_form| %>
   <%= race_form.error_messages %>
   
@@ -47,4 +53,4 @@
 
 <% end %>
 
-<%= link_to 'Back', rotation_race_path(@race.rotation, @race) %>
+
