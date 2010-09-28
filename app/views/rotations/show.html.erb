@@ -7,11 +7,14 @@
 <% end %>
 
 <h1><%= @rotation.name %></h1>
+
 <div class="button"><fb:like layout="button_count" show_faces="false"></fb:like></div>
 <div class="actions">
   <%= link_to 'Edit', edit_rotation_path(@rotation) %> |
   <%= link_to 'Back', rotations_path %>
 </div>
+
+<h2><%= Time.now.to_s(:time) %></h2>
 
 <table>
   <thead>
