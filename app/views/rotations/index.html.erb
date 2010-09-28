@@ -7,6 +7,9 @@
 <% end %>
 
 <h1>Rotations &amp; Rankings</h1>
+<div class="actions">
+  <%= link_to 'New Rotation', new_rotation_path %>
+</div>
 
 <h2><%= Time.now.to_s(:long) %></h2>
 
@@ -32,7 +35,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br />
-
-<%= link_to 'New rotation', new_rotation_path %>
