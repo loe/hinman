@@ -7,9 +7,11 @@
 <% end %>
 
 <h1>Rotations &amp; Rankings</h1>
+<% if admin? %>
 <div class="actions">
   <%= link_to 'New Rotation', new_rotation_path %>
 </div>
+<% end %>
 
 <h2><%= Time.now.to_s(:long) %></h2>
 
@@ -19,7 +21,7 @@
       <th></th>
       <th>Rankings</th>
       <% @rotations.each do |rotation| %>
-      <th><%= link_to(rotation.name, rotation_path(rotation)) %> (<%= link_to 'Edit', edit_rotation_path(rotation) %> | <%= link_to 'Destroy', rotation, :confirm => 'Are you sure?', :method => :delete %>)</th>
+        <th><%= link_to(rotation.name, rotation_path(rotation)) %> <% if admin? %>(<%= link_to 'Edit', edit_rotation_path(rotation) %> | <%= link_to 'Destroy', rotation, :confirm => 'Are you sure?', :method => :delete %>)<% end %></th>
       <% end %>
     </tr>
   </thead>

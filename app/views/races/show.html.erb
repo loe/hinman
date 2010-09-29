@@ -8,7 +8,9 @@
 
 <h1><%= @race.name %> (<%= link_to(@race.rotation.name, rotation_path(@race.rotation)) %>)</h1>
 <div class="actions">
-  <%= link_to 'Record Finishes', edit_rotation_race_finish_path(@rotation, @race) %> |
+  <% if admin? %>
+    <%= link_to 'Record Finishes', edit_rotation_race_finish_path(@rotation, @race) %> |
+  <% end %>
   <%= link_to 'Back', rotation_path(@rotation) %>
 </div>
 

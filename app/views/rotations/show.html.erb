@@ -10,7 +10,9 @@
 
 <div class="button"><fb:like layout="button_count" show_faces="false"></fb:like></div>
 <div class="actions">
-  <%= link_to 'Edit', edit_rotation_path(@rotation) %> |
+  <% if admin? %>
+    <%= link_to 'Edit', edit_rotation_path(@rotation) %> |
+  <% end %>
   <%= link_to 'Back', rotations_path %>
 </div>
 

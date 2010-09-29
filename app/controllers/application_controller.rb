@@ -10,6 +10,17 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
   
+  def ensure_admin
+    redirect_to root_path unless admin?
+  end
+  
+  def admin?
+    if current_facebook_user
+      ADMINS.include?(current_facebook_user[:id])
+    end
+  end
+  helper_method :admin?
+
   protected
   
   def cached_facebook_user(id)

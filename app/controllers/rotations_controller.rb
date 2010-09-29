@@ -1,8 +1,9 @@
 class RotationsController < ApplicationController
   
+  before_filter :ensure_admin, :except => [:index, :show]
   before_filter :build_rotation, :only => [:new, :create]
   before_filter :find_rotation, :only => [:show, :edit, :update, :destroy]
-
+  
   def index
     @rotations = Rotation.order('id DESC')
     @teams = Team.all.sort_by { |team| [-team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), team.name] }

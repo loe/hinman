@@ -1,6 +1,6 @@
 class FinishesController < ApplicationController
   
-  before_filter :load_race
+  before_filter :load_race, :ensure_admin
   
   def edit; end
   
