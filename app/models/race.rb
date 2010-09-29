@@ -38,13 +38,25 @@ class Race < ActiveRecord::Base
   def score(team)
     finishes.where(:boat_id => team.fleet.boats).sum(:position)
   end
-  
+
   def home_total
-    @home_total ||= (score(home) + home_penalty)
+    if value = Rails.cache.read([cache_key, :home_total])
+      value
+    else
+      value = score(home) + home_penalty
+      Rails.cache.write([cache_key, :home_total], value)
+      value
+    end
   end
   
   def away_total
-    @away_total ||= (score(away) + away_penalty)
+    if value = Rails.cache.read([cache_key, :away_total])
+      value
+    else
+      value = score(away) + away_penalty
+      Rails.cache.write([cache_key, :away_total], value)
+      value
+    end
   end
   
   def winner
