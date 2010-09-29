@@ -62,6 +62,8 @@ class Race < ActiveRecord::Base
     attributes.each do |key, value|
       finishes.build(:position => key.to_i + 1, :boat => Boat.where(:bow => value[:boat][:bow]).first)
     end
+    
+    touch
   end
 
   def bows_in_fleets
