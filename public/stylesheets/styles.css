@@ -164,10 +164,15 @@ input {
 
 /* =ACTIONS */
 
-.actions {
-  float: right;
-}
+.actions { float: right; }
 
 /* =COMMENTS */
 
 .comments { padding: 0 20px; }
+
+/* =ROTATIONS */
+
+.rotations h2 {
+  clear: none;
+  float: right;
+}
