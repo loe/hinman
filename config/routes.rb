@@ -8,6 +8,10 @@ Hinman::Application.routes.draw do
   end
   
   resources :rotations do
+    collection do
+      get :multiple
+    end
+    
     resources :races do
       resource :finish
     end
