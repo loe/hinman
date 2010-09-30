@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   
   def ensure_admin
-    redirect_to root_path unless admin?
+    redirect_to '/' unless admin?
   end
   
   def admin?

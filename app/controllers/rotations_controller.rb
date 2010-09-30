@@ -1,6 +1,6 @@
 class RotationsController < ApplicationController
   
-  before_filter :ensure_admin, :except => [:index, :show]
+  before_filter :ensure_admin, :except => [:index, :show, :multiple]
   before_filter :build_rotation, :only => [:new, :create]
   before_filter :find_rotation, :only => [:show, :edit, :update, :destroy]
   
