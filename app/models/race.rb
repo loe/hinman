@@ -75,6 +75,8 @@ class Race < ActiveRecord::Base
       finishes.build(:position => key.to_i + 1, :boat => Boat.where(:bow => value[:boat][:bow]).first)
     end
     
+    # Clear out the cache keys.
+    teams.map(&:touch)
     touch
   end
 

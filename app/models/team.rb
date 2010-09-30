@@ -9,7 +9,7 @@ class Team < ActiveRecord::Base
   validates_presence_of :name
   
   def rotation_races(rotation)
-    races.where(:rotation_id => rotation.id).includes(:entries => {:fleet => :boats})
+    races.where(:rotation_id => rotation.id)
   end
   
   def completed_races(rotation)
