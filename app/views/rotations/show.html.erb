@@ -23,15 +23,15 @@
   <table>
     <thead>
       <tr>
-        <th>Race</th>
-        <th>Teams</th>
+        <th class="race">Race</th>
+        <th class="teams">Teams</th>
       </tr>
     </thead>
     <tbody>
       <% chunk.each do |race| %>
         <tr class="<%= cycle("odd", "even") %>">
-          <td><%= link_to(race.id, rotation_race_path(@rotation, race)) %></td>
-          <td><%= winner_or_loser(race, race.home) %> <%= link_to(race.home.team.name, team_path(race.home.team)) %> (<%= race.home.fleet.color %>) vs. <%= winner_or_loser(race, race.away) %> <%= link_to(race.away.team.name, team_path(race.away.team)) %> (<%= race.away.fleet.color %>)</td>
+          <td class="race"><%= link_to(race.id, rotation_race_path(@rotation, race)) %></td>
+          <td class="team"><%= winner_or_loser(race, race.home) %> <%= link_to(race.home.team.name, team_path(race.home.team)) %> (<%= race.home.fleet.color %>) vs. <%= winner_or_loser(race, race.away) %> <%= link_to(race.away.team.name, team_path(race.away.team)) %> (<%= race.away.fleet.color %>)</td>
        </tr>
       <% end %>
     </tbody>

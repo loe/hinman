@@ -1,13 +1,13 @@
 body {
   background: #fff;
-  font: normal 10px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #000;
+  font: normal 10px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a:link, a:visited {
+  color: #3f5c26;
   font-weight: bold;
   text-decoration: none;
-  color: #3f5c26;
 }
 
 img { border: 0; }
@@ -37,11 +37,26 @@ h1 { margin-bottom: 20px; }
 
 table { width: 49%; }
 table:nth-child(odd) { float: left; }
-table:nth-child(even) { float: right; }
-thead { background-color: #eee; }
-thead th { color: #444; }
+
+table:nth-child(even) {
+  float: right;
+  page-break-after: always;
+}
+
+thead { background-color: #ddd; }
+tr:nth-child(even) { background-color: #eee; }
+
+thead th {
+  color: #444;
+  font-size: 12px;
+}
 
 th, td {
   border: 1px solid #bbb;
-  padding: 4px;
+  padding: 3px;
+}
+
+.race {
+  text-align: center;
+  width: 40px;
 }
