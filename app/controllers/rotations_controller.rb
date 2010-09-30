@@ -5,11 +5,14 @@ class RotationsController < ApplicationController
   before_filter :find_rotation, :only => [:show, :edit, :update, :destroy]
   
   def index
+    expires_in(2.minutes, :public => true)
     @rotations = Rotation.order('id DESC')
     @teams = Team.all.sort_by { |team| [-team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), team.name] }
   end
 
-  def show; end
+  def show
+    expires_in(1.minute, :public => true)
+  end
   
   # Weave multiple rotations together.
   def multiple
