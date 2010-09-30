@@ -69,7 +69,7 @@
       {:name => "Andy Beeckman", :bio => "Huntington Beach, CA USA"},
       {:name => "Killarney Loufek", :bio => "Mill Valley, CA USA"},
       {:name => "Garrett Woodworth", :bio => "Venice, CA USA"},
-      {:name => "Stephanie Adams", :bio => "Mountain View, CA USA"}
+      {:name => "Matt Thomas", :bio => ""}
     ]
   },
   
