@@ -1,0 +1,45 @@
+body {
+  color: #444;
+  font: normal 16px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* =HEADINGS */
+
+h1 { letter-spacing: -.05em; }
+
+h1 {
+  float: left;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+h2 {
+  clear: both;
+  color: #888;
+  font: italic 16px/20px Georgia, serif;
+  font-weight: normal;
+}
+
+h3 {
+  color: #888;
+  clear: both;
+  font: italic 16px/20px Georgia, serif;
+}
+
+/* =TABLES */
+
+table {
+  border-collapse: collapse;
+  clear: both;
+  width: 100%;
+}
+
+thead th { text-align: left; }
+
+/* =ROTATIONS */
+
+.rotations .timestamp {
+  clear: none;
+  float: right;
+  line-height: 30px;
+}

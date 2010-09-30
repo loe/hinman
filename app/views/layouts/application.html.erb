@@ -3,7 +3,9 @@
       xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
   <title><%= yield :title %></title>
-  <%= stylesheet_link_tag 'reset', 'styles' %>
+  <%= stylesheet_link_tag 'reset', 'globals', :media => 'all' %>
+  <%# stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'print', :media => 'all' %>
   <%= csrf_meta_tag %>
   <meta property="fb:app_id" content="<%= Facebooker2.app_id %>" />
   <meta property="og:site_name" content="US Team Racing Championship" />
@@ -11,7 +13,7 @@
   <%= yield :meta %>
   <!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body>
+<body class="<%= controller_name %>">
 
   <nav>
     <ul>

@@ -13,13 +13,13 @@
 </div>
 <% end %>
 
-<h2><%= Time.now.to_s(:long) %></h2>
+<h2 class="timestamp"><%= Time.now.to_s(:long) %></h2>
 
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th>Rankings</th>
+      <th>Rank</th>
+      <th>Team</th>
       <% @rotations.each do |rotation| %>
         <th><%= link_to(rotation.name, rotation_path(rotation)) %> <% if admin? %>(<%= link_to 'Edit', edit_rotation_path(rotation) %> | <%= link_to 'Destroy', rotation, :confirm => 'Are you sure?', :method => :delete %>)<% end %></th>
       <% end %>

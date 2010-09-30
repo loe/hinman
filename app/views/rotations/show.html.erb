@@ -16,7 +16,7 @@
   <%= link_to 'Back', rotations_path %>
 </div>
 
-<h2><%= Time.now.to_s(:long) %></h2>
+<h2 class="timestamp">as of <%= Time.now.to_s(:long) %></h2>
 
 <table>
   <thead>
@@ -25,6 +25,11 @@
       <th>Teams</th>
     </tr>
   </thead>
+  <tfoot>
+    <tr>
+      <td colspan="2">&copy; 2010 US Team Racing Championship</td>
+    </tr>
+  </tfoot>
   <tbody>
     <% @rotation.races.each do |race| %>
       <tr class="<%= cycle("odd", "even") %>">
