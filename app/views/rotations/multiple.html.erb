@@ -1,0 +1,29 @@
+<% page_title @rotations.map(&:name), 'Rotations' %>
+
+<h1><%= @rotations.map(&:name).join(' - ') %></h1>
+
+<h2 class="timestamp">as of <%= Time.now.to_s(:long) %></h2>
+
+<% (@races.to_a / 30).each do |chunk| %>
+<table>
+  <thead>
+    <tr>
+      <th>Race</th>
+      <th>Teams</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td colspan="2">&copy; 2010 US Team Racing Championship</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% chunk.each do |race| %>
+      <tr class="<%= cycle("odd", "even") %>">
+        <td><%= link_to(race.id, rotation_race_path(race.rotation, race)) %></td>
+        <td><%= winner_or_loser(race, race.home) %> <%= link_to(race.home.team.name, team_path(race.home.team)) %> (<%= race.home.fleet.color %>) vs. <%= winner_or_loser(race, race.away) %> <%= link_to(race.away.team.name, team_path(race.away.team)) %> (<%= race.away.fleet.color %>)</td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>

@@ -1,6 +1,6 @@
 class RotationsController < ApplicationController
   
-  before_filter :ensure_admin, :except => [:index, :show]
+  before_filter :ensure_admin, :except => [:index, :show, :multiple]
   before_filter :build_rotation, :only => [:new, :create]
   before_filter :find_rotation, :only => [:show, :edit, :update, :destroy]
   
@@ -10,6 +10,19 @@ class RotationsController < ApplicationController
   end
 
   def show; end
+  
+  # Weave multiple rotations together.
+  def multiple
+    @rotations = Rotation.includes(:races, :entries => [:team, {:fleet => :boats}]).where(:id => params[:id])
+    rotation_races = @rotations.map(&:races)
+    
+    @races = []
+    while rotation_races.any?(&:present?)
+      rotation_races.each do |races|
+        2.times { @races << races.shift }
+      end
+    end
+  end
 
   def new; end
   
