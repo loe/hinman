@@ -13,7 +13,7 @@ class RotationsController < ApplicationController
   
   # Weave multiple rotations together.
   def multiple
-    @rotations = Rotation.includes(:races, :entries => [:team, {:fleet => :boats}]).where(:id => params[:id])
+    @rotations = Rotation.includes(:races, :entries => [:team, {:fleet => :boats}]).where(:id => params[:id].split('/'))
     rotation_races = @rotations.map(&:races)
     
     @races = []
