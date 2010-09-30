@@ -35,7 +35,11 @@ h1 { margin-bottom: 20px; }
 
 /* =TABLES */
 
-table { width: 49%; }
+table {
+  table-layout: fixed;
+  width: 49%;
+}
+
 table:nth-child(odd) { float: left; }
 
 table:nth-child(even) {
@@ -53,7 +57,10 @@ thead th {
 
 th, td {
   border: 1px solid #bbb;
+  overflow: hidden;
   padding: 3px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .race {
