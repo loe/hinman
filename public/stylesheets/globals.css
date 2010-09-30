@@ -28,9 +28,10 @@ h3 {
 
 /* =TABLES */
 
+.table { clear: both; }
+
 table {
   border-collapse: collapse;
-  clear: both;
   width: 100%;
 }
 
