@@ -1,0 +1,32 @@
+body {
+  background: #fff;
+  font: normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+a:link, a:visited {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #3f5c26;
+}
+
+img { border: 0; }
+
+ul, ol {
+  margin-left: 20px;
+  padding: 0;
+}
+
+li { margin-bottom: 20px; }
+abbr { border: 0; }
+
+/* =TYPE */
+
+h1, h2, h3, h4, h5 { margin: 0; }
+p { margin: 0; }
+
+/* =REMOVAL */
+
+nav { display: none; }
+
+/* =TABLES */
