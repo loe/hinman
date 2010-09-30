@@ -4,8 +4,8 @@
 <head>
   <title><%= yield :title %></title>
   <%= stylesheet_link_tag 'reset', 'globals', :media => 'all' %>
-  <%# stylesheet_link_tag 'application' %>
-  <%= stylesheet_link_tag 'print', :media => 'all' %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'print', :media => 'print' %>
   <%= csrf_meta_tag %>
   <meta property="fb:app_id" content="<%= Facebooker2.app_id %>" />
   <meta property="og:site_name" content="US Team Racing Championship" />
