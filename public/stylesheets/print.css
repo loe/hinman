@@ -6,7 +6,7 @@ body {
 
 a:link, a:visited {
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
   color: #3f5c26;
 }
 
@@ -27,6 +27,18 @@ p { margin: 0; }
 
 /* =REMOVAL */
 
-nav { display: none; }
+nav, aside, footer, .button, .actions { display: none; }
+
+/* =HEADINGS */
+
+h1 { margin-bottom: 30px; }
 
 /* =TABLES */
+
+thead { background-color: #eee; }
+thead th { color: #444; }
+
+th, td {
+  border: 1px solid #bbb;
+  padding: 10px;
+}

@@ -1,5 +1,5 @@
 body {
-  color: #000;
+  color: #444;
   font: normal 16px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -11,7 +11,6 @@ h1 {
   float: left;
   font-size: 30px;
   line-height: 30px;
-  padding: 30px 20px 5px 20px;
 }
 
 h2 {
@@ -19,30 +18,28 @@ h2 {
   color: #888;
   font: italic 16px/20px Georgia, serif;
   font-weight: normal;
-  padding: 0 20px;
 }
-
-h2 a { opacity: .8; }
 
 h3 {
   color: #888;
   clear: both;
   font: italic 16px/20px Georgia, serif;
-  padding: 25px 20px 10px 20px;
 }
 
 /* =TABLES */
 
-table { width: 100%; }
-
-thead th {
-  color: #888;
-  font: italic 16px/20px Georgia, serif;
-  padding: 25px 20px 9px 20px;
-  text-align: left;
+table {
+  border-collapse: collapse;
+  clear: both;
+  width: 100%;
 }
 
-thead tr { border-bottom: 1px solid rgba(0, 0, 0, .05); }
-tr { border-bottom: 1px solid #dfe5f5; }
-tr.odd { background-color: #eceff9; }
-td { padding: 10px 20px 9px 20px; }
+thead th { text-align: left; }
+
+/* =ROTATIONS */
+
+.rotations .timestamp {
+  clear: none;
+  float: right;
+  line-height: 30px;
+}

@@ -1,9 +1,5 @@
 html, body { height: 100%; }
-
-body {
-  color: #444;
-  position: relative;
-}
+body { position: relative; }
 
 a:link, a:visited {
   color: #1e3062;
@@ -97,6 +93,27 @@ footer {
 
 footer p { font: italic 16px/20px Georgia, serif; }
 
+/* =HEADINGS */
+
+h1 { letter-spacing: -.05em; }
+h1 { padding: 30px 20px 5px 20px; }
+h2 { padding: 0 20px; }
+h2 a { opacity: .8; }
+h3 { padding: 25px 20px 10px 20px; }
+
+/* =TABLES */
+
+thead th {
+  color: #888;
+  font: italic 16px/20px Georgia, serif;
+  padding: 25px 20px 9px 20px;
+}
+
+thead tr { border-bottom: 1px solid rgba(0, 0, 0, .05); }
+tr { border-bottom: 1px solid #dfe5f5; }
+tr.odd { background-color: #eceff9; }
+td { padding: 10px 20px 9px 20px; }
+
 /* =FORMS */
 
 form {
@@ -110,24 +127,13 @@ input {
   padding: 0;
 }
 
-/* =BUTTON */
+/* =SHARED */
 
 .button {
   float: left;
   margin-top: 36px;
 }
 
-/* =ACTIONS */
-
 .actions { float: right; }
-
-/* =COMMENTS */
-
+.timestamp { display: none; }
 .comments { padding: 0 20px; }
-
-/* =ROTATIONS */
-
-.rotations h2 {
-  clear: none;
-  float: right;
-}
