@@ -202,7 +202,7 @@
 end
 
 bow = 1
-['Blue', 'Pink', 'Black', 'Orange', 'Red', 'White', 'Yellow', 'Grey'].each do |color|
+['Black', 'Orange', 'Yellow', 'Grey', 'Red', 'White', 'Pink', 'Blue'].each do |color|
   fleet = Fleet.create(:color => color)
   3.times do
     fleet.boats.create(:bow => bow)
