@@ -62,22 +62,20 @@ article {
   left: 0;
   overflow-y: scroll;
   position: absolute;
+  right: 400px;
   top: 0;
-  width: 70%;
 }
 
 /* =ASIDE */
 
 aside {
-  background: #eee;
+  background: #fff;
   bottom: 0;
   right: 0;
   position: fixed;
   top: 60px;
-  width: 30%;
+  width: 400px;
 }
-
-aside .interior { padding: 20px; }
 
 /* =FOOTER */
 
