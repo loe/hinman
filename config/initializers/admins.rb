@@ -5,5 +5,6 @@ ADMINS = Set.new [
   '502820844', # Ben Glass
   '1491364622', # Leslie Keller
   '566447564', # David Ferguson
-  '1627382967' # Matthew Anderson
+  '1627382967', # Matthew Anderson
+  '1590385247' # Mark Murphy
 ]

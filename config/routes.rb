@@ -8,14 +8,12 @@ Hinman::Application.routes.draw do
   end
   
   resources :rotations do
-    collection do
-      get :multiple
-    end
-    
     resources :races do
       resource :finish
     end
   end  
+  
+  match 'rotations/multiple/*id' => 'rotations#multiple'
   
   match '/' => 'rotations#index'
 end

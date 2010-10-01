@@ -7,6 +7,9 @@
   <%= stylesheet_link_tag 'application' %>
   <%= stylesheet_link_tag 'print', :media => 'print' %>
   <%= csrf_meta_tag %>
+  <% if params[:refresh] %>
+    <meta http-equiv="refresh" content="120">
+  <% end %>
   <meta property="fb:app_id" content="<%= Facebooker2.app_id %>" />
   <meta property="og:site_name" content="US Team Racing Championship" />
   <meta property="og:image" content="http://usteamracing.com/images/HinmanLogoRevised.gif" />
@@ -33,11 +36,7 @@
 
     <aside>
       <div class="interior">
-        <% if current_facebook_user %>
-          <fb:live-stream width="300" height="500"></fb:live-stream>
-        <% else %>
-          <fb:login-button></fb:login-button>
-        <% end %>
+        <fb:live-stream width="400" height="600"></fb:live-stream>
       </div>
     </aside>
   </section>
