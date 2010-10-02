@@ -9,6 +9,6 @@ module RotationsHelper
 
   def team_stats(rotation, team)
     return if team.completed_races(rotation).length == 0
-    "#{team.win_percentage(rotation)}% (#{team.won_races(rotation).length}/#{team.completed_races(rotation).length})"
+    "#{number_with_precision(team.win_percentage(rotation), :precision => 2)}% (#{team.won_races(rotation).length}/#{team.completed_races(rotation).length})"
   end
 end

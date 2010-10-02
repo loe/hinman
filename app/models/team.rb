@@ -27,6 +27,6 @@ class Team < ActiveRecord::Base
   end
 
   def rotations
-    Rotation.joins(:races => :entries).where(:entries => {:team_id => self}).select('DISTINCT rotations.*').order('rotations.id ASC')
+    Rotation.joins(:races => :entries).where(:entries => {:team_id => self}).select('DISTINCT rotations.*')
   end
 end
