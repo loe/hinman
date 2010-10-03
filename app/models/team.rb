@@ -6,6 +6,8 @@ class Team < ActiveRecord::Base
   has_many :entries
   has_many :races, :through => :entries
   
+  scope :real, where(:ghost => false)
+  
   validates_presence_of :name
   
   def rotation_races(rotation)
