@@ -5,6 +5,7 @@ class RotationsController < ApplicationController
   before_filter :find_rotation, :only => [:show, :edit, :update, :destroy]
   
   def index
+    expires_in(5.minutes, :public => true)
     @rotations = Rotation.order('updated_at DESC')
     @teams = Team.all.sort_by { |team| [-team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), team.name] }
   end
