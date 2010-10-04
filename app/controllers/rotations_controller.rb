@@ -6,7 +6,7 @@ class RotationsController < ApplicationController
   
   def index
     @rotations = Rotation.order('id DESC')
-    @teams = Team.real.sort_by { |team| [-team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), team.name] }
+    @teams = Team.all.sort_by { |team| [-team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), team.name] }
   end
 
   def show; end

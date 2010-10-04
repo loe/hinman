@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101003043219) do
+ActiveRecord::Schema.define(:version => 20100927063608) do
 
   create_table "boats", :force => true do |t|
     t.integer  "bow"
@@ -87,7 +87,6 @@ ActiveRecord::Schema.define(:version => 20101003043219) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "color"
-    t.boolean  "ghost",      :default => false
   end
 
   add_index "teams", ["name"], :name => "index_teams_on_name"
