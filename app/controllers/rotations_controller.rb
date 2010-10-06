@@ -10,7 +10,9 @@ class RotationsController < ApplicationController
     @teams = Team.all.sort_by { |team| [-team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), team.name] }
   end
 
-  def show; end
+  def show
+    expires_in(5.minutes, :public => true)
+  end
   
   # Weave multiple rotations together.
   def multiple
