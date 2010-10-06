@@ -7,7 +7,7 @@ class RotationsController < ApplicationController
   def index
     expires_in(5.minutes, :public => true)
     @rotations = Rotation.order('updated_at DESC')
-    @teams = Team.all.sort_by { |team| [-team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), team.name] }
+    @teams = Team.all.sort_by { |team| [-team.rotations.sum(:participation_value), -team.win_percentage(team.rotations.last), -team.tie_break_points, team.name] }
   end
 
   def show
