@@ -26,7 +26,7 @@ class RotationsController < ApplicationController
       end
     end
   end
-
+  
   def new; end
   
   def edit
@@ -41,7 +41,7 @@ class RotationsController < ApplicationController
       render(:action => "new")
     end
   end
-
+  
   def update
    if @rotation.update_attributes(params[:rotation])
       flash[:notice] = 'Rotation was successfully updated.'
@@ -50,7 +50,7 @@ class RotationsController < ApplicationController
       render(:action => "edit")
     end
   end
-
+  
   def destroy
     @rotation.destroy
     redirect_to(rotations_url)
