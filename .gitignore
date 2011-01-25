@@ -2,6 +2,7 @@
 .bundle
 .rvmrc
 *.swp
+*.rbc
 config/database.yml
 coverage/*
 log/*
