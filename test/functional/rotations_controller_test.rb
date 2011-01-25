@@ -4,6 +4,7 @@ class RotationsControllerTest < ActionController::TestCase
   
   def setup
     @rotation = Factory(:rotation)
+    RotationsController.any_instance.stubs(:admin?).returns(true)
   end
   
   test "should get index" do
