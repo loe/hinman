@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(:version => 20101006030057) do
     t.datetime "updated_at"
     t.string   "color"
     t.boolean  "ghost",                :default => false
-    t.integer  "tie_break_points"
+    t.integer  "tie_break_points",     :default => 0
     t.integer  "repechage_percentage", :default => 0
   end
 
