@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   
   def admin?
     if current_facebook_user
+      RAILS_DEFAULT_LOGGER.warn(current_facebook_user.inspect)
       ADMINS.include?(current_facebook_user[:id])
     end
   end
