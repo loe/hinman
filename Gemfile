@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails'
 gem 'facebooker2'
 gem 'dalli'
-gem 'mysql2'
+gem 'pg'
 
 group :test do
  gem 'factory_girl_rails'
