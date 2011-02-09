@@ -1,11 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'rails'
-gem 'bundler'
-gem 'facebooker2', :git => 'git://github.com/loe/facebooker2.git'
-gem 'thin'
-gem 'pg'
+gem 'facebooker2'
 gem 'dalli'
+gem 'mysql2'
 
 group :test do
  gem 'factory_girl_rails'
