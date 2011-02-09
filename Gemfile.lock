@@ -54,7 +54,7 @@ GEM
       rake
     mogli (0.0.25)
       httparty (>= 0.4.3)
-    mysql2 (0.2.6)
+    pg (0.10.1)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -89,5 +89,5 @@ DEPENDENCIES
   facebooker2
   factory_girl_rails
   mocha
-  mysql2
+  pg
   rails
