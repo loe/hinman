@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   layout 'application'
   
   def current_user
-    cached_facebook_user(current_facebook_user[:id])
+    cached_facebook_user(current_facebook_user.id)
   end
   helper_method :current_user
   
@@ -16,8 +16,7 @@ class ApplicationController < ActionController::Base
   
   def admin?
     if current_facebook_user
-      RAILS_DEFAULT_LOGGER.warn(current_facebook_user.inspect)
-      ADMINS.include?(current_facebook_user[:id])
+      ADMINS.include?(current_facebook_user.id)
     end
   end
   helper_method :admin?
