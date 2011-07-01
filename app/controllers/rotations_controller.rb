@@ -5,7 +5,6 @@ class RotationsController < ApplicationController
   before_filter :find_rotation, :only => [:show, :edit, :update, :destroy]
   
   def index
-    expires_in(5.minutes, :public => true)
     @rotations = Rotation.order('updated_at DESC')
     @teams = Team.all.sort_by do |team| 
       [
@@ -18,9 +17,7 @@ class RotationsController < ApplicationController
     end
   end
 
-  def show
-    expires_in(5.minutes, :public => true)
-  end
+  def show; end
   
   # Weave multiple rotations together.
   def multiple
