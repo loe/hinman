@@ -15,9 +15,11 @@ class ApplicationController < ActionController::Base
   end
   
   def admin?
-    if current_facebook_user
-      true #ADMINS.include?(current_facebook_user.id.to_i)
-    end
+    #if current_facebook_user
+      #ADMINS.include?(current_facebook_user.id.to_i)
+    #end
+
+    true
   end
   helper_method :admin?
 
