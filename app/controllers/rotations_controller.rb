@@ -9,7 +9,6 @@ class RotationsController < ApplicationController
     @teams = Team.all.sort_by do |team| 
       [
         -team.rotations.sum(:participation_value),
-        -team.repechage_percentage,
         -team.win_percentage(team.rotations.last),
         -team.tie_break_points,
         team.name
