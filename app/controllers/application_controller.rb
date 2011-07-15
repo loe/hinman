@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
       value
     else
       value = Mogli::User.find(id, current_facebook_client)
-      Rails.cache.write(id, value, :expires_in => 30.minutes)
+      Rails.cache.write(id, value, :expires_in => 5.minutes)
       value
     end
   end
