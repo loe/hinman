@@ -5,13 +5,11 @@ class RotationsController < ApplicationController
   before_filter :find_rotation, :only => [:show, :edit, :update, :destroy]
   
   def index
-    expires_in(5.minutes, :public => true)
     @rotations = Rotation.order('updated_at DESC')
     ActiveRecord::IdentityMap.use do
-      @teams = Team.all.sort_by do |team| 
+      @teams = Team.all.sort_by do |team|
         [
           -team.rotations.sum(:participation_value),
-          -team.repechage_percentage,
           -team.win_percentage(team.rotations.last),
           -team.tie_break_points,
           team.name
@@ -19,10 +17,8 @@ class RotationsController < ApplicationController
       end
     end
   end
-
-  def show
-    expires_in(5.minutes, :public => true)
-  end
+  
+  def show; end
   
   # Weave multiple rotations together.
   def multiple
