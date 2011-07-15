@@ -31,7 +31,7 @@ GEM
     arel (2.0.10)
     builder (2.1.2)
     crack (0.1.8)
-    dalli (1.0.2)
+    dalli (1.0.5)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     facebooker2 (0.0.11)
@@ -50,11 +50,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    mocha (0.9.11)
-      rake
+    mocha (0.9.12)
     mogli (0.0.28)
       httparty (>= 0.4.3)
-    pg (0.10.1)
+    pg (0.11.0)
     polyglot (0.3.1)
     rack (1.2.3)
     rack-mount (0.6.14)
@@ -93,4 +92,3 @@ DEPENDENCIES
   mocha
   pg
   rails
-  rake
