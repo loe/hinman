@@ -36,8 +36,9 @@
 
     <aside>
       <div class="interior">
-        <fb:live-stream width="400" height="640"></fb:live-stream>
-        <% unless current_user %>
+        <% if current_user %>
+          <fb:live-stream width="400" height="640"></fb:live-stream>
+        <% else %>
           <fb:login-button>Login with Facebook</fb:login-button>
         <% end %>
       </div>
