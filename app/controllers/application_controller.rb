@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   layout 'application'
   
   def current_user
-    cached_facebook_user(current_facebook_user.id)
+    cached_facebook_user(current_facebook_user.id) if current_facebook_user
   end
   helper_method :current_user
   

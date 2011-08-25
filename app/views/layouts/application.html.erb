@@ -37,11 +37,14 @@
     <aside>
       <div class="interior">
         <fb:live-stream width="400" height="640"></fb:live-stream>
+        <% unless current_user %>
+          <fb:login-button>Login with Facebook</fb:login-button>
+        <% end %>
       </div>
     </aside>
   </section>
 
-  <footer><p>&copy; 2010 US Team Racing Championship</p> <fb:login-button></footer>
+  <footer><p>&copy; 2011 US Team Racing Championship</p></footer>
 
   <%= render(:partial => 'shared/javascript') %>
 
