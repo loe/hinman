@@ -2,6 +2,9 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
+Facebooker2.app_id = '1'
+Facebooker2.secret = 'foo'
+
 class ActiveSupport::TestCase
   
   def score_sideshow_vs_panda
