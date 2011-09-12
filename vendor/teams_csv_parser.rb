@@ -29,6 +29,8 @@ CSV.foreach('teams.csv') do |row|
     current_team = Team.new(row[0])
     teams << current_team
   end
+
+  next unless row[1].present?
   
   current_team.players << {row[1] => "#{row[2]}, #{row[3]} #{row[4]}"}
 end
