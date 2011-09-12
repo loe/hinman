@@ -107,5 +107,5 @@ DEPENDENCIES
   foreman
   mocha
   pg
-  rails
+  rails (~> 3.0.0)
   thin

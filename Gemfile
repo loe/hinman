@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails'
+gem 'rails', '~> 3.0.0'
 gem 'facebooker2'
 gem 'dalli'
 gem 'pg'
