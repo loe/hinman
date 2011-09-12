@@ -6,7 +6,7 @@ class RotationsController < ApplicationController
   
   def index
     @rotations = Rotation.order('updated_at DESC')
-    @teams = Team.all.sort_by do |team| 
+    @teams = Team.where('name != ?', 'Bye').sort_by do |team| 
       [
         -team.rotations.sum(:participation_value),
         -team.win_percentage(team.rotations.last),
