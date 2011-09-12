@@ -1,198 +1,143 @@
 # coding: utf-8
-{
-  
-  "Big Whoop!" => {
-    :color => 'Purple',
-    :players => [
-      {:name => "Brendan Healy", :bio => "Arnold, MD USA"},
-      {:name => "Meghan Jordan", :bio => "East Amhurst, NY USA"},
-      {:name => "Chris Lash", :bio => "Newport, RI USA"},
-      {:name => "Corinna DeCollibus", :bio => "Duxbury, Massachusetts USA"},
-      {:name => "Russ O'Reilly", :bio => "Charleston, SC USA"},
-      {:name => "Joel Labuzetta", :bio => "Annapolis, MD USA"}
-    ]
-  },
-  
-  "Buns & Ammo" => {
-    :color => 'Black',
-    :players => [
-      {:name => "Mark Dinneen", :bio => "Newport, RI USA"},
-      {:name => "Janel Zarkowsky", :bio => "Annapolis, MD USA"},
-      {:name => "Clinton Hayes", :bio => "East Haddam, CT USA"},
-      {:name => "Christine Bletzer", :bio => "Medfield, MA USA"},
-      {:name => "Billy Martin", :bio => "Riverton, NJ"},
-      {:name => "Emily Anderson", :bio => "Northport, NY USA"}
-    ]
-  },
-  
-  "North Field Alliance" => {
-    :color => 'Yellow',
-    :players => [
-      {:name => "Alexander Kirkland", :bio => "Warwick, BDA BER"},
-      {:name => "Catherine Swanson", :bio => "Charleston, SC USA"},
-      {:name => "Jesse Kirkland", :bio => "Warwick, BDA BER"},
-      {:name => "Ashley Phillips", :bio => "Charleston, SC USA"},
-      {:name => "David Siegal", :bio => "Newport, RI USA"},
-      {:name => "Carly Chamberlain", :bio => "San Francisco, CA USA"}
-    ]
-  },
-  
-  "North Shore Trouble" => {
-    :color => 'Lime Green',
-    :players => [
-      {:name => "Benjamin Spiller", :bio => "Somervile, MA USA"},
-      {:name => "Anna Miniutti", :bio => "Jamestown, RI USA"},
-      {:name => "Matt Allen", :bio => "Beverly, MA USA"},
-      {:name => "Andrew Schneider", :bio => "Marblehead, MA USA"},
-      {:name => "Charles Higgins", :bio => "Norfolk, VA USA"},
-      {:name => "Maureen Castrucio", :bio => "Newport, RI USA"}
-    ]
-  },
-  
-  "NYYC Silver Panda" => {
-    :color => 'Pink',
-    :players => [
-      {:name => "Colin Merrick", :bio => "Portsmouth, RI USA"},
-      {:name => "Amanda Callahan", :bio => "Canton, MA USA"},
-      {:name => "Clay Bischoff", :bio => "Newport, RI USA"},
-      {:name => "Caroline Hall Levesque", :bio => "Tiverton, RI USA"},
-      {:name => "Peter Levesque", :bio => "Tiverton, RI USA"},
-      {:name => "Carrie Amarante", :bio => "Wayne, NJ USA"}
-    ]
-  },
-  
-  "One Man Wolfpack" => {
-    :color => 'Orange',
-    :players => [
-      {:name => "James Silsby", :bio => "Huntington Beach, CA USA"},
-      {:name => "Whitney Loufek", :bio => "San Diego, CA USA"},
-      {:name => "Andy Beeckman", :bio => "Huntington Beach, CA USA"},
-      {:name => "Killarney Loufek", :bio => "Mill Valley, CA USA"},
-      {:name => "Garrett Woodworth", :bio => "Venice, CA USA"},
-      {:name => "Matt Thomas", :bio => ""}
-    ]
-  },
-  
-  "Seattle Sideshow" => {
-    :color => 'Royal Blue',
-    :players => [
-      {:name => "Anthony Boscolo", :bio => "Seattle, WA USA"},
-      {:name => "Jen Morgan Glass", :bio => "Seattle, WA USA"},
-      {:name => "Dalton Bergan", :bio => "Seattle, WA USA"},
-      {:name => "Lindsay Bergan", :bio => "Seattle, WA USA"},
-      {:name => "W. Andrew Loe III", :bio => "Seattle, WA USA"},
-      {:name => "Mallory Fontenot", :bio => "Seattle, WA USA"}
-    ]
-  },
-  
-  "Statesman with Heron" => {
-    :color => 'White',
-    :players => [
-      {:name => "Trevor Moore", :bio => "North Pomfret, VT USA"},
-      {:name => "Mandi Markee", :bio => "Del Mar, CA USA"},
-      {:name => "Brian Clancy", :bio => "Annapolis, MD USA"},
-      {:name => "Chris Klevan", :bio => "Norfolk, VA USA"},
-      {:name => "Lee Sackett", :bio => "Cleveland, OH USA"},
-      {:name => "Oscar Barney", :bio => "Portland, OR USA"}
-    ]
-  },
-  
-  "Tall Boyz" => {
-    :color => 'Gray',
-    :players => [
-      {:name => "Clay Johnson", :bio => "Toms River, NJ USA"},
-      {:name => "Elyse Dolbec", :bio => "Quincy, MA USA"},
-      {:name => "Scott Hogan", :bio => "New York, NY USA"},
-      {:name => "Megan Watson", :bio => "Boston, MA USA"},
-      {:name => "Sean Doyle", :bio => "Cos Cob, CT USA"},
-      {:name => "Susan Doyle", :bio => "Cos Cob, CT USA"}
-    ]
-  },
-  
-  "Team Extreme" => {
-    :color => 'Light Blue',
-    :players => [
-      {:name => "Zachary Brown", :bio => "New Haven, CT USA"},
-      {:name => "Emmet Smith", :bio => "New Haven, CT USA"},
-      {:name => "Thomas Barrows", :bio => "Saint Thomas, VI ISV"},
-      {:name => "Maria Menninger", :bio => "New York, NY USA"},
-      {:name => "Stuart McNay", :bio => "Boston, MA USA"},    
-      {:name => "Michael Hession", :bio => "Chicago, IL USA"}
-    ]
-  },
-    
-  "Team SDYC" => {
-    :color => 'Light Purple',
-    :players => [
-      {:name => "Mikee Anderson Mitterling", :bio => "Newport Beach, CA USA"},
-      {:name => "David Hughes", :bio => "San Diego, CA USA"},
-      {:name => "Adam Roberts", :bio => "San Diego, CA USA"},
-      {:name => "Brennan Clark", :bio => "San Diego, CA USA"},
-      {:name => "Nicholas Martin", :bio => "San Diego, CA USA"},
-      {:name => "Molly O’Bryan Vandemoer", :bio => "San Diego, CA USA"}
-    ]
-  },
-  
-  "Team St.FYC" => {
-    :color => 'Magenta',
-    :players => [
-      {:name => "Harrison Turner", :bio => "Mountain View, CA USA"},
-      {:name => "Jessica Barhydt", :bio => "San Francisco, CA USA"},
-      {:name => "Holt Condon", :bio => "San Francisco, CA USA"},
-      {:name => "Melanie Roberts", :bio => "San Francisco, CA USA"},
-      {:name => "Edward Conrad", :bio => "San Francisco, CA USA"},
-      {:name => "Kristin Maberry", :bio => "San Francisco, CA USA"}
-    ]
-  },
-  
-  "The Woonsocket Rockets" => {
-    :color => 'Kelly Green',
-    :players => [
-      {:name => "Joel Hanneman", :bio => "Newport, RI USA"},
-      {:name => "Alexa Schuler", :bio => "Newport, RI USA"},
-      {:name => "Justin Law", :bio => "Newport Beach, CA USA"},
-      {:name => "Megan Riddle", :bio => "Charleston, SC USA"},
-      {:name => "Brian Kamilar", :bio => "Miami, FL USA"},
-      {:name => "Lyndsey Gibbons-Neff", :bio => "Rosemont, PA USA"}
-    ]
-  },
-  
-  "Treasure Island Pirates" => {
-    :color => 'Teal',
-    :players => [
-      {:name => "Kevin Richards", :bio => "Alameda, CA USA"},
-      {:name => "Avery Patton", :bio => "Oakland, CA USA"},
-      {:name => "Dan Altreuter", :bio => "Redwood City, CA USA"},
-      {:name => "Salley Madsen", :bio => "San Francisco, CA USA"},
-      {:name => "Patrick Whitmarsh", :bio => "Oakland, CA USA"},
-      {:name => "Natasha Baker", :bio => "Oakland, CA USA"}
-    ]
-  },
-  
-  "West Kirby Hawks" => {
-    :color => 'Maroon',
-    :players => [
-      {:name => "Dom Johnson", :bio => "Orpington, Kent GBR"},
-      {:name => "Debs Steele", :bio => "Southampton, Hampshire GBR"},
-      {:name => "Andy Cornah", :bio => "Sevenoaks, Kent GBR"},
-      {:name => "Hamish Walker", :bio => "Southampton, Hampshire GBR"},
-      {:name => "Ben Field", :bio => "Sevenoaks, Kent GBR"},
-      {:name => "Tom Foster", :bio => "Southampton, Hampshire GBR"},
-    ]
-  },
-
-  "Who Dat!" => {
-    :color => 'Red',
-    :players => [
-      {:name => "Matthew Duggan", :bio => "Boston, MA USA"},
-      {:name => "Alyssa Aitken", :bio => "Sandwich, MA USA"},
-      {:name => "John Potts", :bio => "New Orleans, LA USA"},
-      {:name => "Keisha Pearson", :bio => "East Patchogue, NY USA"},
-      {:name => "Cardwell Potts", :bio => "Greenwich, CT USA"},
-      {:name => "Vanessa DeCollibus", :bio => "Somerville, MA USA"}
-    ]
-  }
-  
+{"Larchmont Yacht Club"=>
+  {:color=>"Purple",
+   :players=>
+    [{"Danny Pletsch"=>"Greenwich, CT USA"},
+     {"Megan Magill"=>"Greenwich, CT USA"},
+     {"Cardwell Potts"=>"Greenwich, CT USA"},
+     {"James Gilman"=>"Stamford, CT USA"},
+     {"Michael Menninger"=>"Newport Beach, CA USA"},
+     {"Ashley Phillips"=>"Charleston, SC USA"}]},
+ "Minor Threat"=>
+  {:color=>"Black",
+   :players=>
+    [{"Cy Thompson"=>"Newport, RI USA"},
+     {"Kelly Stannard"=>"Salem, CT USA"},
+     {"Charlie Buckingham"=>"Newport Beach, CA USA"},
+     {"Alex Taylor"=>"Boston, MA USA"},
+     {"Tyler Sinks"=>"San Diego, CA USA"},
+     {"Lucy Wallace"=>"Middletown, RI USA"}]},
+ "Pretty Good Thirds"=>
+  {:color=>"Yellow",
+   :players=>
+    [{"Ben Quatromoni"=>"Portsmouth, RI USA"},
+     {"Emily Anderson"=>"Northport, NY USA"},
+     {"Charlie Enright"=>"Bristol, RI USA"},
+     {"Meris Tombari"=>"Bristol, RI USA"},
+     {"Kaitlin Storck"=>"Huntington, NY USA"},
+     {"Lyndsey Gibbons-Neff"=>"Boston, MA USA"}]},
+ "Seattle Sideshow"=>
+  {:color=>"Lime Green",
+   :players=>
+    [{"W. Andrew Loe III"=>"Seattle, WA USA"},
+     {"Mallory Fontenot"=>"Seattle, WA USA"},
+     {"Anthony Boscolo"=>"Seattle, WA USA"},
+     {"Jen Morgan"=>"Seattle, WA USA"},
+     {"Dalton Bergan"=>"Seattle, WA USA"},
+     {"Lindsay Bergan"=>"Seattle, WA USA"}]},
+ "SoCal Luchadores"=>
+  {:color=>"Pink",
+   :players=>
+    [{"Brian Bissell"=>"San Diego, CA USA"},
+     {"Rebecca Nygren"=>"San Diego, CA USA"},
+     {"Andrew Campbell"=>"Washington, DC USA"},
+     {"Jacqueline Campbell"=>"Washington, DC USA"},
+     {"Nevin Snow"=>"San Diego, CA USA"},
+     {"Allie Blecher"=>"Fullerton, CA USA"}]},
+ "Southern California Trojans"=>
+  {:color=>"Orange",
+   :players=>
+    [{"Colin Campbell"=>"Manhattan Beach, CA USA"},
+     {"Ben Palmer"=>"Los Angeles, CA USA"},
+     {"Michael Anderson-Mitterling"=>"Irvine, CA USA"},
+     {"Kyrstin Munson"=>"Manhattan Beach, CA USA"},
+     {"Greg Helias"=>"Laguna Beach, CA USA"},
+     {"Melanie Roberts"=>"San Francisco, CA USA"}]},
+ "Spinnaker"=>
+  {:color=>"Royal Blue",
+   :players=>
+    [{"Ben Saxton"=>"Ashwell, Baldock, Hertfordshire GBR"},
+     {"Tim Saxton"=>"Ashwell, Baldock, Hertfordshire GBR"},
+     {"Mark Powell"=>"Hayling Island, Hants GBR"},
+     {"Isobel Walker"=>"Newport, RI USA"},
+     {"Sam Littlejohn"=>"Worthing, West Sussex GBR"},
+     {"Toby Lewis"=>"Wimborne, Dorset, UK GBR"}]},
+ "Stanford Cardinal"=>
+  {:color=>"White",
+   :players=>
+    [{"Kevin Laube"=>"San Diego, CA USA"},
+     {"Carolyn Ortel"=>"Annapolis, MD USA"},
+     {"Mateo Vargas"=>"Treasure Island, FL USA"},
+     {"Haley Kirk"=>"Long Beach, CA USA"},
+     {"Oliver Toole"=>"Santa Barbara, CA USA"},
+     {"Hannah Burroughs"=>"Stanford, CA USA"}]},
+ "Team Extreme"=>
+  {:color=>"Gray",
+   :players=>
+    [{"Stuart McNay"=>"Boston, MA USA"},
+     {"Michael Hession"=>"Chicago, IL USA"},
+     {"Zachary Brown"=>"San Diego, CA USA"},
+     {"Emmett Smith"=>"New Haven, CT USA"},
+     {"Thomas Barrows"=>"St. Thomas, VI ISV"},
+     {"Marla Menninger"=>"New York, NY USA"}]},
+ "Team Trouble"=>
+  {:color=>"Light Blue",
+   :players=>
+    [{"Benjamin Spiller"=>"Quincy, MA USA"},
+     {"Anna Miniutti"=>"Quincy, MA USA"},
+     {"Matt Allen"=>"Beverly, MA USA"},
+     {"Andrew Schneider"=>"Marblehead, MA USA"},
+     {"Mark Dinneen"=>"Milton, CT USA"},
+     {"Janel Zarkowsky"=>"Annapolis, MD USA"}]},
+ "The Boston Boom"=>
+  {:color=>"Light Purple",
+   :players=>
+    [{"Billy Martin"=>"Riverton, NJ USA"},
+     {"Sarah Whalen"=>"Westwood, MA USA"},
+     {"Clinton Hayes"=>"East Haddam, CT USA"},
+     {"Erin Pierce"=>"South Freeport, ME USA"},
+     {"Bobby Martin"=>"Boston, MA USA"},
+     {"Erin Kilcline"=>"Boston, MA USA"}]},
+ "The Woonsocket Rockets"=>
+  {:color=>"Magenta",
+   :players=>
+    [{"Justin Law"=>"Newport Beach, CA USA"},
+     {"Jane Macky"=>"New York, NY USA"},
+     {"Joel Hanneman"=>"Newport, RI USA"},
+     {"Alexa Schuler"=>"Marblehead, MA USA"},
+     {"Nick Ewenson"=>"Newport, RI USA"},
+     {"Hilary Wiech"=>"Newport, RI USA"}]},
+ "Triple Action"=>
+  {:color=>"Kelly Green",
+   :players=>
+    [{"John Pearce"=>"Washington, DC USA"},
+     {"Chris Klevan"=>"Norfolk, VA USA"},
+     {"Brian Clancy"=>"Ithaca, NY USA"},
+     {"Zach Goldman"=>"New York, NY USA"},
+     {"Trevor Moore"=>"North Pomfret, VT USA"},
+     {"Mandi Markee"=>"Del Mar, CA USA"}]},
+ "Triple Double"=>
+  {:color=>"Teal",
+   :players=>
+    [{"Christopher Mace"=>"Newport Beach, CA USA"},
+     {"Hilary Kenyon"=>"Wayzata, MN USA"},
+     {"Samuel Stokes"=>"Norfolk, VA USA"},
+     {"Brooks Clark"=>"Newport Beach, CA USA"},
+     {"James Silsby"=>"Costa Mesa, CA USA"},
+     {"Sally Mace"=>"Newport Beach, CA USA"}]},
+ "Who Dat"=>
+  {:color=>"Maroon",
+   :players=>
+    [{"John Potts"=>"New Orleans, LA USA"},
+     {"Keisa Pearson"=>"Annapolis, MD USA"},
+     {"Mitchell Hall"=>"New Orleans, LA USA"},
+     {"Jennifer Watkins"=>"New Orleans, LA USA"},
+     {"Matthew  Duggan"=>"Boston, MA USA"},
+     {"Catherine Swanson"=>"Charleston, SC USA"}]},
+ "Bye"=>
+  {:color=>"Red",
+   :players=>
+   []}
 }.each do |team, info|
   t = Team.create(:name => team, :color => info[:color])
   
