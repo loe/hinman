@@ -4,6 +4,7 @@
 *.swp
 *.rbc
 config/database.yml
+config/facebooker.yml
 coverage/*
 log/*
 public/javascripts/cache/*
